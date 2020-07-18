@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Takhfif01</string>
+
+
+    <string name="slide_1_title">تخفیف</string>
+    <string name="slide_1_desc">با ما همراه باشید تا با تخفیفات فروشگاهی خبردار شوید</string>
+
+    <string name="slide_2_title">تخفیف</string>
+    <string name="slide_2_desc">با ما همراه باشید تا با تخفیفات فروشگاهی خبردار شوید</string>
+
+    <string name="slide_3_title">تخفیف</string>
+    <string name="slide_3_desc">با ما همراه باشید تا با تخفیفات فروشگاهی خبردار شوید</string>
+
+    <string name="slide_4_title">تخفیف</string>
+    <string name="slide_4_desc">با ما همراه باشید تا با تخفیفات فروشگاهی خبردار شوید</string>
+
+
+    <string-array name="slide_titles">
+        <item>@string/slide_1_title</item>
+        <item>@string/slide_2_title</item>
+        <item>@string/slide_3_title</item>
+        <item>@string/slide_4_title</item>
+    </string-array>
+
+
+    <string-array name="slide_descriptions">
+        <item>@string/slide_1_desc</item>
+        <item>@string/slide_2_desc</item>
+        <item>@string/slide_3_desc</item>
+        <item>@string/slide_4_desc</item>
+    </string-array>
+
+
+</resources>

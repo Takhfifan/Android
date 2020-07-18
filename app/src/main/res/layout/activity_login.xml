@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_10"
+    tools:context=".activity.LoginActivity">
+
+    <!--
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/barg_64"
+                                android:tint="@android:color/white" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="6dp"
+                                app:cardElevation="5dp">
+
+                                <LinearLayout
+                                    android:layoutDirection="rtl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="20dp">
+
+                                    <com.example.takhfif01.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginBottom="35dp"
+                                        android:layout_marginTop="10dp"
+                                        android:text="ثبت نام"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                                        android:textColor="@color/green_500"
+                                        android:textStyle="bold" />
+
+                                    <com.example.takhfif01.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="نام"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/grey_60" />
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="-4dp"
+                                        android:layout_marginRight="-4dp"
+                                        android:inputType="text"
+                                        android:maxLength="50"
+                                        android:maxLines="1"
+                                        android:singleLine="true"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                                        android:textColor="@color/blue_600"
+                                        android:textStyle="bold"
+                                        android:theme="@style/EditText.Grey" />
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="20dp" />
+
+
+                                    <com.example.takhfif01.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="نام خانوادگی"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/grey_60" />
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="-4dp"
+                                        android:layout_marginRight="-4dp"
+                                        android:inputType="text"
+                                        android:maxLength="50"
+                                        android:maxLines="1"
+                                        android:singleLine="true"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                                        android:textColor="@color/blue_600"
+                                        android:textStyle="bold"
+                                        android:theme="@style/EditText.Grey" />
+
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="20dp" />
+
+
+                                    <com.example.takhfif01.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="شماره موبایل"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/grey_60" />
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="-4dp"
+                                        android:layout_marginRight="-4dp"
+                                        android:inputType="text"
+                                        android:maxLength="50"
+                                        android:maxLines="1"
+                                        android:singleLine="true"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                                        android:textColor="@color/blue_600"
+                                        android:textStyle="bold"
+                                        android:theme="@style/EditText.Grey" />
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="20dp" />
+
+                                    <com.example.takhfif01.fonts.MyButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="55dp"
+                                        android:layout_marginLeft="-4dp"
+                                        android:layout_marginRight="-4dp"
+                                        android:background="@drawable/btn_rounded_primary"
+                                        android:text="دریافت کد فعال سازی"
+                                        android:textSize="16sp"
+                                        android:textAllCaps="false"
+                                        android:textColor="@android:color/white"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="15dp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="VERIFICATION"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="You will get SMS with a confirmation code to this number."
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_marginTop="35dp"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="10dp"
+                                        android:layout_height="0dp" />
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:enabled="false"
+                                        android:hint="Phone Number"
+                                        android:inputType="phone"
+                                        android:maxLines="1"
+                                        android:singleLine="true"
+                                        android:text="09999999999"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                        android:textColor="@color/grey_40"
+                                        android:textStyle="bold">
+
+                                        <requestFocus />
+
+                                    </com.google.android.material.textfield.TextInputEditText>
+
+
+                                    <ImageButton
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@android:color/transparent"
+                                        android:tint="@color/colorAccent"
+                                        app:srcCompat="@drawable/ic_check_circle"
+                                        tools:ignore="VectorDrawableCompat" />
+
+                                </LinearLayout>
+
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    -->
+
+    <include layout="@layout/sign_up" />
+
+    <include layout="@layout/get_code" />
+
+
+</RelativeLayout>
