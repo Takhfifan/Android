@@ -24,6 +24,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:paddingBottom="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -332,7 +333,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="32dp"
                         android:orientation="horizontal">
 
                         <LinearLayout
@@ -438,8 +439,8 @@
                             android:orientation="horizontal">
 
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -546,8 +547,8 @@
 
                             </androidx.cardview.widget.CardView>
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -654,8 +655,8 @@
 
                             </androidx.cardview.widget.CardView>
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -762,8 +763,8 @@
 
                             </androidx.cardview.widget.CardView>
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -870,8 +871,8 @@
 
                             </androidx.cardview.widget.CardView>
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -978,8 +979,8 @@
 
                             </androidx.cardview.widget.CardView>
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -1038,7 +1039,7 @@
 
 
                             <com.example.takhfif01.fonts.MyButton
-                                android:layout_marginLeft="4dp"
+                                android:layout_marginLeft="8dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:text="مشاهده همه"
@@ -1060,7 +1061,7 @@
                             <com.example.takhfif01.fonts.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginRight="16dp"
+                                android:layout_marginRight="8dp"
                                 android:text="جدیدترین فروشگاه ها"
                                 android:textColor="#292929"
                                 android:textSize="22sp" />
@@ -1087,8 +1088,8 @@
                             android:orientation="horizontal">
 
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -1196,8 +1197,8 @@
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -1305,8 +1306,8 @@
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -1414,8 +1415,8 @@
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -1523,8 +1524,8 @@
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
-                                android:layout_width="180dp"
-                                android:layout_height="300dp"
+                                android:layout_width="190dp"
+                                android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 app:cardCornerRadius="6dp"
@@ -1639,6 +1640,171 @@
                     </HorizontalScrollView>
 
 
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp">
+
+                            <ImageView
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"
+                                android:id="@+id/banner1"
+                                android:layout_width="match_parent"
+                                android:layout_height="135dp"
+                                android:src="@drawable/bcmain1"/>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginLeft="8dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="10dp">
+                                <ImageView
+                                    android:scaleType="fitCenter"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/banner2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="140dp"
+                                    android:src="@drawable/bcmainsmall5"/>
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:scaleType="fitCenter"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/banner3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="140dp"
+                                    android:src="@drawable/bcmainsmall1" />
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp">
+
+                            <ImageView
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="135dp"
+                                android:src="@drawable/bcmain3"
+                                android:id="@+id/banner4"/>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginLeft="8dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="10dp">
+                                <ImageView
+                                    android:scaleType="fitCenter"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/banner5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="140dp"
+                                    android:src="@drawable/bcmainsmall3"/>
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:scaleType="fitCenter"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/banner6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="140dp"
+                                    android:src="@drawable/bcmainsmall4" />
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
 
 
 
