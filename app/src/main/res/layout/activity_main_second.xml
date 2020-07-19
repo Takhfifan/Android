@@ -209,6 +209,7 @@
                                     android:textStyle="bold"
                                     android:textColor="@color/grey_600"/>
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_marginRight="4dp"
                                 android:layout_marginLeft="4dp"
@@ -233,7 +234,7 @@
                                         android:layout_width="35dp"
                                         android:layout_height="35dp"
                                         android:tint="@color/colorPrimary"
-                                        android:src="@drawable/ic_baseline_person_outline_48"/>
+                                        android:src="@drawable/ic_baseline_person_24"/>
                                 </androidx.cardview.widget.CardView>
 
                                 <com.example.takhfif01.fonts.MyTextView
@@ -243,6 +244,43 @@
                                     android:text="اطلاعات کاربری"
                                     android:textSize="13sp"
                                     android:textStyle="bold"
+                                    android:textColor="@color/grey_600"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginRight="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="8dp"
+                                android:layout_marginTop="8dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?android:selectableItemBackground"
+                                    app:cardCornerRadius="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:layout_margin="8dp"
+                                        android:scaleType="centerCrop"
+                                        android:adjustViewBounds="true"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:tint="@color/colorPrimary"
+                                        android:src="@drawable/ic_baseline_favorite_24"/>
+                                </androidx.cardview.widget.CardView>
+
+                                <com.example.takhfif01.fonts.MyTextView
+                                    android:layout_marginTop="4dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="علاقه مندی ها"
+                                    android:textStyle="bold"
+                                    android:textSize="13sp"
                                     android:textColor="@color/grey_600"/>
                             </LinearLayout>
 
