@@ -1,6 +1,7 @@
 package com.example.takhfif01.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
@@ -15,6 +16,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
@@ -65,15 +67,17 @@ public class MainActivity extends AppCompatActivity  {
     ListView BuyMenuListView_nav, productListView_nav, settingListView;
     LinearLayout linearInfo_main, linearMoreInfo_main;
 
-
+/*
     ArrayList<String> urlPics;
-    ArrayList<String> name;
+    ArrayList<String> name;*/
 
-    TextView txtUserName_nav,txtexit_nav;
+    private TextView txtUserName_nav,txtexit_nav;
 
     public static SharedPreferences preferences;
 
-    SliderPreManger preManeger;
+    private SliderPreManger preManeger;
+
+    private CardView btn_goto_profile_main;
 
 
 
@@ -126,9 +130,12 @@ public class MainActivity extends AppCompatActivity  {
         addNavMenuList();
         openDrawer();
         showMoreInfoInNav();
+        goToProfile();
 
 
     }
+
+
     private void init() {
         btnMenu_main = findViewById(R.id.btnMenu_main);
         drawerLayout = findViewById(R.id.drawer_main);
@@ -142,8 +149,18 @@ public class MainActivity extends AppCompatActivity  {
         txtUserName_nav = findViewById(R.id.txtUserName_nav);
         txtexit_nav = findViewById(R.id.txtexit_nav);
         preManeger = new SliderPreManger(C.context);
+        btn_goto_profile_main = findViewById(R.id.btn_goto_profile_main);
 
 
+    }
+    private void goToProfile() {
+        btn_goto_profile_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void exitProfile() {
@@ -240,7 +257,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private void addNavMenuList() {
         buyMenuAdapterArrayList = new ArrayList<>();
-        buyMenuAdapterArrayList.add(new buyMenuListItem(R.drawable.ic_baseline_home_48, "خانه"));
+        buyMenuAdapterArrayList.add(new buyMenuListItem(R.drawable.ic_baseline_favorite_24_color_primary, "علاقه مندی ها"));
         buyMenuAdapterArrayList.add(new buyMenuListItem(R.drawable.ic_baseline_list_48, "لیست دسته بندی"));
         BuyMenuListView_nav.setAdapter(new buyMenuAdapter(MainActivity.this, R.layout.buy_menu_list, buyMenuAdapterArrayList));
 
@@ -270,6 +287,7 @@ public class MainActivity extends AppCompatActivity  {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
         dialog.setContentView(R.layout.dialog_warning_exit_from_profile);
         dialog.setCancelable(true);
+       // dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
