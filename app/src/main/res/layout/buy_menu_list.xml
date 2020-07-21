@@ -46,12 +46,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.1">
 
+            <!--
             <ImageView
                 android:layout_width="24sp"
                 android:layout_height="24sp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_arrow_back_ios_48"
                 android:tint="@color/grey_40" />
+            -->
 
         </LinearLayout>
 

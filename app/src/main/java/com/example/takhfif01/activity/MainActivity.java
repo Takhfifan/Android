@@ -1,5 +1,6 @@
 package com.example.takhfif01.activity;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-   /* @Override
+   @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -112,9 +113,9 @@ public class MainActivity extends AppCompatActivity  {
             SharedPreferences.Editor editor = preferences.edit();
             editor.putString("username", username);
             editor.commit();
-
+            checkUsernameInNav();
         }
-    }*/
+    }
 
 
     @Override
@@ -158,7 +159,8 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                startActivity(intent);
+                //startActivity(intent);
+                startActivityForResult(intent,0);
             }
         });
     }
@@ -175,7 +177,7 @@ public class MainActivity extends AppCompatActivity  {
 
 
     private void checkUsernameInNav() {
-        if (txtUserName_nav.getText().toString().equals("ورود")) {
+        if (txtUserName_nav.getText().toString().equals("")) {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             //startActivityForResult(intent, 0);
             startActivity(intent);
@@ -185,20 +187,24 @@ public class MainActivity extends AppCompatActivity  {
 
     private void setUpUsernameInNav() {
         preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-        String username = preferences.getString("username", "ورود");
+        String username = preferences.getString("username", "");
 
         txtUserName_nav.setText(username);
         Log.i("TAG", "setUpUsernameInNav: username" + username);
 
         if (username != null) {
             if (username.equals("")) {
-                txtUserName_nav.setText("ورود");
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                //startActivityForResult(intent, 0);
+                startActivity(intent);
+                finish();
             } else {
                 txtUserName_nav.setText(username);
             }
         } else {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-            startActivityForResult(intent, 0);
+            //startActivityForResult(intent, 0);
+            startActivity(intent);
             finish();
         }
     }
@@ -267,7 +273,6 @@ public class MainActivity extends AppCompatActivity  {
         productItems.add(new productMenuListItem("بیشترین تخفیف ها"));
         productItems.add(new productMenuListItem("پربازدیدترین ها"));
         productItems.add(new productMenuListItem("جدیدترین ها"));
-        productItems.add(new productMenuListItem("نزدیک ترین ها"));
         productListView_nav.setAdapter(new productMenuAdaapter(MainActivity.this, R.layout.product_menu_list, productItems));
 
 
@@ -308,7 +313,8 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View v) {
                 preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.putString("username", "ورود");
+                //editor.putString("username", "");
+                editor.clear();
                 editor.commit();
                 drawerLayout.closeDrawer(Gravity.RIGHT);
 

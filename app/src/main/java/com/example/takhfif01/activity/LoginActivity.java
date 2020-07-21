@@ -63,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String username = name_signup.getText().toString().trim() + " " + lastname_signup.getText().toString().trim();
+                String phoneNumber = number_signup.getText().toString().trim();
                 Log.i("TAG", "onClick username: " + username);
 
 
@@ -72,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                     preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("username", username);
+                    editor.putString("phoneNumber", phoneNumber);
                     editor.commit();
 
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
