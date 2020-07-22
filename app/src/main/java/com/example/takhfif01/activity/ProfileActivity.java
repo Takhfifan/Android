@@ -1,6 +1,7 @@
 package com.example.takhfif01.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -43,7 +45,11 @@ public class ProfileActivity extends AppCompatActivity {
 
     private SliderPreManger preManeger;
 
-    String username, phoneNumber;
+    String username, phoneNumber,email,accNumber;
+
+    ImageView btnBackProfile;
+
+    SwipeRefreshLayout swipe_profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +59,46 @@ public class ProfileActivity extends AppCompatActivity {
         setUserNameTopOfProfile();
         addMenuList();
         exitProfile();
+        backProfile();
+        refreshBySwipe();
 
 
+    }
+
+
+    private void init() {
+        preManeger = new SliderPreManger(C.context);
+        profileMenuListView = findViewById(R.id.profileMenuListView);
+        profileEditMenuListView = findViewById(R.id.profileEditMenuListView);
+        txtUserName_profile = findViewById(R.id.txtUserName_profile);
+        linear_exitProfile = findViewById(R.id.linear_exitProfile);
+        btnBackProfile = findViewById(R.id.btnBackProfile);
+        swipe_profile = findViewById(R.id.swipe_profile);
+
+    }
+
+    private void refreshBySwipe() {
+
+        swipe_profile.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                setUserNameTopOfProfile();
+                addMenuList();
+
+                swipe_profile.setRefreshing(false);
+            }
+        });
+
+    }
+
+    private void backProfile() {
+        btnBackProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void exitProfile() {
@@ -66,21 +110,13 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
-
-    private void init() {
-        preManeger = new SliderPreManger(C.context);
-        profileMenuListView = findViewById(R.id.profileMenuListView);
-        profileEditMenuListView = findViewById(R.id.profileEditMenuListView);
-        txtUserName_profile = findViewById(R.id.txtUserName_profile);
-        linear_exitProfile = findViewById(R.id.linear_exitProfile);
-
-    }
-
     private void setUserNameTopOfProfile() {
 
         preferences = PreferenceManager.getDefaultSharedPreferences(ProfileActivity.this);
         username = preferences.getString("username", "");
         phoneNumber = preferences.getString("phoneNumber", "");
+        email = preferences.getString("email", "");
+        accNumber = preferences.getString("accNumber", "");
 
         txtUserName_profile.setText(username);
         Log.i("TAG", "setUserNameTopOfProfile: username" + username);
@@ -98,16 +134,16 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void addMenuList() {
         profileListItems = new ArrayList<>();
-        profileListItems.add(new profileListItem(R.drawable.ic_baseline_account_balance_wallet_24_color_primary, "افزایش اعتبار"));
         profileListItems.add(new profileListItem(R.drawable.ic_baseline_favorite_24_color_primary, "علاقه مندی ها"));
         profileListItems.add(new profileListItem(R.drawable.ic_baseline_comment_24_primary_color, "نقد و نظرات"));
+        profileListItems.add(new profileListItem(R.drawable.ic_baseline_delete_forever_24_color_primary, "غیرفعال سازی حساب کاربری"));
         profileMenuListView.setAdapter(new profileMenuAdapter(ProfileActivity.this, R.layout.profile_menu_list, profileListItems));
 
         profileEditListItems = new ArrayList<>();
         profileEditListItems.add(new profileEditListItem(R.drawable.ic_baseline_person_24_primary_color, "نام و نام خانوادگی", username + ""));
         profileEditListItems.add(new profileEditListItem(R.drawable.ic_mobile_baseline_stay_primary_portrait_24_color_primary, "شماره تلفن همراه", phoneNumber + ""));
-        profileEditListItems.add(new profileEditListItem(R.drawable.ic_baseline_alternate_email_24_color_primary, "پست الکترونیک", "sfgsdg@gsgr.gmail.com" + ""));
-        profileEditListItems.add(new profileEditListItem(R.drawable.ic_baseline_credit_card_24_color_primary, "شماره کارت جهت بازگردانی وجه نقد", "9864685466846" + ""));
+        profileEditListItems.add(new profileEditListItem(R.drawable.ic_baseline_alternate_email_24_color_primary, "پست الکترونیک", email + ""));
+        profileEditListItems.add(new profileEditListItem(R.drawable.ic_baseline_credit_card_24_color_primary, "شماره کارت جهت بازگردانی وجه نقد", accNumber + ""));
         profileEditMenuListView.setAdapter(new profileEditMenuAdapter(ProfileActivity.this, R.layout.profile_edit_menu_list, profileEditListItems));
 
 

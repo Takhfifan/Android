@@ -28,7 +28,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:paddingBottom="16dp">
@@ -77,7 +77,7 @@
                 <com.example.takhfif01.fonts.MyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16sp"
+                    android:layout_marginTop="16dp"
                     android:gravity="center"
                     android:text="به زودی کد چهار رقمی به شماره ی زیر وارد میشه"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"

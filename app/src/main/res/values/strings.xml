@@ -31,4 +31,10 @@
     </string-array>
 
 
+    <string name="warning_delete_acc">توجه:با این کار حساب کاربری خود غیرفعال میشود!</string>
+    <string name="first_warning_delete_acc">برای تغییر شماره تلفن همرا اول باید حساب کاربری خود را غیرفعال کنید.</string>
+    <string name="warning_acc_bring_back_money">توجه:این شماره کارت برای بازگردانی وجه نقد استفاده خواهد لطفا دقت فرمایید.</string>
+
+
+
 </resources>

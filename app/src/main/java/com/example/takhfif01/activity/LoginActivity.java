@@ -63,6 +63,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String username = name_signup.getText().toString().trim() + " " + lastname_signup.getText().toString().trim();
+                String name = name_signup.getText().toString().trim();
+                String lastName = lastname_signup.getText().toString().trim();
                 String phoneNumber = number_signup.getText().toString().trim();
                 Log.i("TAG", "onClick username: " + username);
 
@@ -73,6 +75,8 @@ public class LoginActivity extends AppCompatActivity {
                     preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("username", username);
+                    editor.putString("name", name);
+                    editor.putString("lastName", lastName);
                     editor.putString("phoneNumber", phoneNumber);
                     editor.commit();
 
@@ -131,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
     private boolean checkFieldLastName() {
         if (!(lastname_signup.getText().toString().trim().length() >= 4)) {
             lastname_layout_signup.setErrorEnabled(true);
-            lastname_layout_signup.setError("نام باید حداقل 4 حرف باشد");
+            lastname_layout_signup.setError("نام خانوادگی باید حداقل 4 حرف باشد");
             return false;
         }
         return true;

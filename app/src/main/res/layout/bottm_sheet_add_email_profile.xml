@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.example.takhfif01.fonts.MyTextView
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="اضافه کردن پست الکترونیک"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C6C6C6"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+    <com.example.takhfif01.fonts.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="پست الکترونیک"
+        android:textColor="@color/grey_60"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_layout_add_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.takhfif01.fonts.MyEditText
+            android:focusedByDefault="false"
+            android:id="@+id/email_add_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:theme="@style/EditText.Grey" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+</LinearLayout>
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C6C6C6"/>
+
+
+
+    <com.example.takhfif01.fonts.MyButton
+        android:id="@+id/btn_add_email"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="-4dp"
+        android:layout_marginRight="-4dp"
+        android:background="@drawable/btn_rounded_primary"
+        android:text="تایید"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_margin="8dp"/>
+
+
+</LinearLayout>
