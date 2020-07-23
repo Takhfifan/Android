@@ -9,7 +9,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,11 +19,9 @@ import android.widget.TextView;
 
 import com.example.takhfif01.R;
 import com.example.takhfif01.activity.introSlider.SliderPreManger;
-import com.example.takhfif01.adapter.buyMenuAdapter;
 import com.example.takhfif01.adapter.profileEditMenuAdapter;
 import com.example.takhfif01.adapter.profileMenuAdapter;
 import com.example.takhfif01.context.C;
-import com.example.takhfif01.model.buyMenuListItem;
 import com.example.takhfif01.model.profileEditListItem;
 import com.example.takhfif01.model.profileListItem;
 
@@ -137,14 +134,14 @@ public class ProfileActivity extends AppCompatActivity {
         profileListItems.add(new profileListItem(R.drawable.ic_baseline_favorite_24_color_primary, "علاقه مندی ها"));
         profileListItems.add(new profileListItem(R.drawable.ic_baseline_comment_24_primary_color, "نقد و نظرات"));
         profileListItems.add(new profileListItem(R.drawable.ic_baseline_delete_forever_24_color_primary, "غیرفعال سازی حساب کاربری"));
-        profileMenuListView.setAdapter(new profileMenuAdapter(ProfileActivity.this, R.layout.profile_menu_list, profileListItems));
+        profileMenuListView.setAdapter(new profileMenuAdapter(ProfileActivity.this, R.layout.menu_list_profile, profileListItems));
 
         profileEditListItems = new ArrayList<>();
         profileEditListItems.add(new profileEditListItem(R.drawable.ic_baseline_person_24_primary_color, "نام و نام خانوادگی", username + ""));
         profileEditListItems.add(new profileEditListItem(R.drawable.ic_mobile_baseline_stay_primary_portrait_24_color_primary, "شماره تلفن همراه", phoneNumber + ""));
         profileEditListItems.add(new profileEditListItem(R.drawable.ic_baseline_alternate_email_24_color_primary, "پست الکترونیک", email + ""));
         profileEditListItems.add(new profileEditListItem(R.drawable.ic_baseline_credit_card_24_color_primary, "شماره کارت جهت بازگردانی وجه نقد", accNumber + ""));
-        profileEditMenuListView.setAdapter(new profileEditMenuAdapter(ProfileActivity.this, R.layout.profile_edit_menu_list, profileEditListItems));
+        profileEditMenuListView.setAdapter(new profileEditMenuAdapter(ProfileActivity.this, R.layout.menu_list_profile_edit, profileEditListItems));
 
 
     }

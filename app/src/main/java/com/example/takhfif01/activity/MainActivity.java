@@ -15,14 +15,14 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
+import android.graphics.Point;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -33,15 +33,11 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
 import com.example.takhfif01.context.C;
 import com.example.takhfif01.R;
 import com.example.takhfif01.activity.introSlider.SliderPreManger;
@@ -80,6 +76,9 @@ public class MainActivity extends AppCompatActivity  {
 
     private CardView btn_goto_profile_main;
 
+
+
+    private int width_phone,height_phone,width_height;
 
 
 
@@ -265,7 +264,7 @@ public class MainActivity extends AppCompatActivity  {
         buyMenuAdapterArrayList = new ArrayList<>();
         buyMenuAdapterArrayList.add(new buyMenuListItem(R.drawable.ic_baseline_favorite_24_color_primary, "علاقه مندی ها"));
         buyMenuAdapterArrayList.add(new buyMenuListItem(R.drawable.ic_baseline_list_48, "لیست دسته بندی"));
-        BuyMenuListView_nav.setAdapter(new buyMenuAdapter(MainActivity.this, R.layout.buy_menu_list, buyMenuAdapterArrayList));
+        BuyMenuListView_nav.setAdapter(new buyMenuAdapter(MainActivity.this, R.layout.menu_list_buy, buyMenuAdapterArrayList));
 
 
         productItems = new ArrayList<>();
@@ -273,14 +272,14 @@ public class MainActivity extends AppCompatActivity  {
         productItems.add(new productMenuListItem("بیشترین تخفیف ها"));
         productItems.add(new productMenuListItem("پربازدیدترین ها"));
         productItems.add(new productMenuListItem("جدیدترین ها"));
-        productListView_nav.setAdapter(new productMenuAdaapter(MainActivity.this, R.layout.product_menu_list, productItems));
+        productListView_nav.setAdapter(new productMenuAdaapter(MainActivity.this, R.layout.menu_list_product, productItems));
 
 
         settingItems = new ArrayList<>();
         settingItems.add(new settingMenuListItem("تنظیمات"));
         settingItems.add(new settingMenuListItem("سوالات متداول"));
         settingItems.add(new settingMenuListItem("درباره ما"));
-        settingListView.setAdapter(new settingMenuAdapter(MainActivity.this, R.layout.setting_menu_list, settingItems));
+        settingListView.setAdapter(new settingMenuAdapter(MainActivity.this, R.layout.menu_list_setting, settingItems));
 
 
     }
@@ -463,7 +462,8 @@ public class MainActivity extends AppCompatActivity  {
         layout_dots.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new ImageView(this);
-            int width_height = 25;
+            //int width_height = 25;
+            getSizeScreen();
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(new ViewGroup.LayoutParams(width_height, width_height));
             params.setMargins(10, 10, 10, 10);
             dots[i].setLayoutParams(params);
@@ -488,6 +488,33 @@ public class MainActivity extends AppCompatActivity  {
             }
         };
         handler_image_slider_main.postDelayed(runnable_image_slider_main, 3000);
+    }
+
+    private void getSizeScreen(){
+
+        Display screensize = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        screensize.getSize(size);
+        width_phone  = size.x;
+        height_phone = size.y;
+
+
+
+        if (width_phone<=480 && height_phone<=800){
+            width_height = 13;
+
+        }else if (width_phone<=720 && height_phone<=1184){
+            width_height = 20;
+        }
+        else {
+
+            width_height = 25;
+        }
+
+
+        Log.i("TAG", "getSizeScreen: \n width="+width_phone+"\n"+"height="+height_phone);
+
+
     }
 
 

@@ -24,8 +24,8 @@
 
             <ImageView
                 android:id="@+id/imgMenuList"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="right"
                 android:layout_marginRight="14dp"
                 android:src="@drawable/ic_baseline_home_48" />
@@ -38,7 +38,7 @@
                 android:layout_gravity="right"
                 android:layout_marginRight="16sp"
                 android:text="خانه"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
         <LinearLayout
