@@ -980,6 +980,10 @@
 
                             </androidx.cardview.widget.CardView>
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/gotoShowShop"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:selectableItemBackground"
                                 android:layout_width="190dp"
                                 android:layout_height="310dp"
                                 android:layout_marginLeft="4dp"

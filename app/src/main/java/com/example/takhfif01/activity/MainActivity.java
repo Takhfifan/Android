@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private SliderPreManger preManeger;
 
-    private CardView btn_goto_profile_main;
+    private CardView btn_goto_profile_main,gotoShowShop;
 
 
 
@@ -131,8 +131,19 @@ public class MainActivity extends AppCompatActivity  {
         openDrawer();
         showMoreInfoInNav();
         goToProfile();
+        goToShowShop();
 
 
+    }
+
+    private void goToShowShop() {
+        gotoShowShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ShowShopActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -150,6 +161,7 @@ public class MainActivity extends AppCompatActivity  {
         txtexit_nav = findViewById(R.id.txtexit_nav);
         preManeger = new SliderPreManger(C.context);
         btn_goto_profile_main = findViewById(R.id.btn_goto_profile_main);
+        gotoShowShop = findViewById(R.id.gotoShowShop);
 
 
     }
