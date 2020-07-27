@@ -3,6 +3,7 @@ package com.example.takhfif01.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 import androidx.transition.TransitionManager;
 import androidx.viewpager.widget.PagerAdapter;
@@ -20,6 +21,8 @@ import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -29,21 +32,24 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.takhfif01.R;
 import com.example.takhfif01.context.C;
 import com.example.takhfif01.model.Image_Slider_Main;
+import com.example.takhfif01.utils.ViewAnimation;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShowShopActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutAdressName,linearLayoutAdressDetail,linearLayoutMoreInfoDetail_showShop,linearLayoutMoreInfoName_showShop, linearLayoutReadMoreDetail_showShop, linearLayoutReadMoreName_showShop;
-    CardView cardViewAddress_showShop,cardViewMoreInfo_showShop, cardViewReadMore_showShop;
-    ImageView imageViewAddressArrow_showShop,imageViewMoreInfoArrow_showShop, imageViewReadMoreArrow_showShop;
+    LinearLayout linearLayoutAdressName,
+            linearLayoutMoreInfoName_showShop,
+            linearLayoutReadMoreName_showShop;
+    View linearLayoutAdressDetail,
+            linearLayoutMoreInfoDetail_showShop,
+            linearLayoutReadMoreDetail_showShop;
+    CardView cardViewAddress_showShop, cardViewMoreInfo_showShop, cardViewReadMore_showShop;
+    ImageView imageViewAddressArrow_showShop, imageViewMoreInfoArrow_showShop, imageViewReadMoreArrow_showShop;
 
 
-
-
-    private int width_phone,height_phone,width_height;
-
+    private int width_phone, height_phone, width_height;
 
 
     private ViewPager viewPager_image_slider_showShop;
@@ -60,7 +66,10 @@ public class ShowShopActivity extends AppCompatActivity {
     };
 
 
-
+    private NestedScrollView nested_scroll_view;
+    private ImageButton bt_toggle_text, bt_toggle_input;
+    private Button bt_hide_text, bt_save_input, bt_hide_input;
+    private View lyt_expand_text, lyt_expand_input;
 
 
     @Override
@@ -85,18 +94,16 @@ public class ShowShopActivity extends AppCompatActivity {
         linearLayoutMoreInfoDetail_showShop = findViewById(R.id.linearLayoutMoreInfoDetail_showShop);
         linearLayoutMoreInfoName_showShop = findViewById(R.id.linearLayoutMoreInfoName_showShop);
         imageViewMoreInfoArrow_showShop = findViewById(R.id.imageViewMoreInfoArrow_showShop);
-        imageViewMoreInfoArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24_black);
-        imageViewAddressArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24_black);
         cardViewReadMore_showShop = findViewById(R.id.cardViewReadfMore_showShop);
         linearLayoutReadMoreDetail_showShop = findViewById(R.id.linearLayoutReadfMoreDetail_showShop);
         linearLayoutReadMoreName_showShop = findViewById(R.id.linearLayoutReadfMoreName_showShop);
         imageViewReadMoreArrow_showShop = findViewById(R.id.imageViewReadfMoreArrow_showShop);
-        imageViewReadMoreArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24_black);
+        nested_scroll_view = findViewById(R.id.nested_scroll_view_show_shop);
     }
 
 
     private void showReadMore() {
-
+/*
         linearLayoutReadMoreName_showShop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,11 +118,22 @@ public class ShowShopActivity extends AppCompatActivity {
                     imageViewReadMoreArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24_black);
                 }
             }
+        });*/
+
+
+        linearLayoutReadMoreName_showShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleReadMoreText(imageViewReadMoreArrow_showShop);
+
+            }
         });
+
     }
 
-    private void showMoreInfo() {
 
+    private void showMoreInfo() {
+/*
         linearLayoutMoreInfoName_showShop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,11 +148,19 @@ public class ShowShopActivity extends AppCompatActivity {
                     imageViewMoreInfoArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24_black);
                 }
             }
+        });*/
+        linearLayoutMoreInfoName_showShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleDetailText(imageViewMoreInfoArrow_showShop);
+
+            }
         });
+
     }
 
     private void showAddress() {
-
+/*
         linearLayoutAdressName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,10 +176,80 @@ public class ShowShopActivity extends AppCompatActivity {
                 }
             }
         });
+*/
+
+        linearLayoutAdressName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleAddressText(imageViewAddressArrow_showShop);
+
+            }
+        });
+    }
+
+    private void toggleAddressText(View view) {
+        boolean show = toggleArrow(view);
+        if (show) {
+            ViewAnimation.expand(linearLayoutAdressDetail, new ViewAnimation.AnimListener() {
+                @Override
+                public void onFinish() {
+                    nestedScrollTo(nested_scroll_view, linearLayoutAdressDetail);
+                }
+            });
+        } else {
+            ViewAnimation.collapse(linearLayoutAdressDetail);
+        }
 
     }
 
+    private void toggleDetailText(View view) {
+        boolean show = toggleArrow(view);
+        if (show) {
+            ViewAnimation.expand(linearLayoutMoreInfoDetail_showShop, new ViewAnimation.AnimListener() {
+                @Override
+                public void onFinish() {
+                    nestedScrollTo(nested_scroll_view, linearLayoutMoreInfoDetail_showShop);
+                }
+            });
+        } else {
+            ViewAnimation.collapse(linearLayoutMoreInfoDetail_showShop);
+        }
 
+    }
+
+    private void toggleReadMoreText(View view) {
+        boolean show = toggleArrow(view);
+        if (show) {
+            ViewAnimation.expand(linearLayoutReadMoreDetail_showShop, new ViewAnimation.AnimListener() {
+                @Override
+                public void onFinish() {
+                    nestedScrollTo(nested_scroll_view, linearLayoutReadMoreDetail_showShop);
+                }
+            });
+        } else {
+            ViewAnimation.collapse(linearLayoutReadMoreDetail_showShop);
+        }
+
+    }
+
+    public boolean toggleArrow(View view) {
+        if (view.getRotation() == 0) {
+            view.animate().setDuration(200).rotation(180);
+            return true;
+        } else {
+            view.animate().setDuration(200).rotation(0);
+            return false;
+        }
+    }
+
+    public static void nestedScrollTo(final NestedScrollView nested, final View targetView) {
+        nested.post(new Runnable() {
+            @Override
+            public void run() {
+                nested.scrollTo(500, targetView.getBottom());
+            }
+        });
+    }
 
 
     private void setupSlider() {
@@ -234,13 +330,13 @@ public class ShowShopActivity extends AppCompatActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             final Image_Slider_Main o2 = items2.get(position);
-            Log.i("TAG", "instantiateItem: "+o2);
+            Log.i("TAG", "instantiateItem: " + o2);
             LayoutInflater inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View v = inflater.inflate(R.layout.item_image_slider_main, container, false);
 
-            ImageView image =  v.findViewById(R.id.image_from_item_image_slider_main);
+            ImageView image = v.findViewById(R.id.image_from_item_image_slider_main);
             displayImageFromUrl(act, image, o2.image);
-            Log.i("TAG", "instantiateItem: "+o2.image);
+            Log.i("TAG", "instantiateItem: " + o2.image);
 
             ((ViewPager) container).addView(v);
 
@@ -254,11 +350,6 @@ public class ShowShopActivity extends AppCompatActivity {
         }
 
     }
-
-
-
-
-
 
     public static void displayImageFromUrl(Context ctx, ImageView img, String drawable) {
 
@@ -275,7 +366,7 @@ public class ShowShopActivity extends AppCompatActivity {
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .into(img);
         } catch (Exception e) {
-            Log.e("TAG", "displayImageFromUrl: "+e.toString());
+            Log.e("TAG", "displayImageFromUrl: " + e.toString());
         }
     }
 
@@ -313,42 +404,37 @@ public class ShowShopActivity extends AppCompatActivity {
         handler_image_slider_showShop.postDelayed(runnable_image_slider_showShop, 3000);
     }
 
-    private void getSizeScreen(){
+    private void getSizeScreen() {
 
         Display screensize = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         screensize.getSize(size);
-        width_phone  = size.x;
+        width_phone = size.x;
         height_phone = size.y;
 
 
-
-        if (width_phone<=480 && height_phone<=800){
+        if (width_phone <= 480 && height_phone <= 800) {
             width_height = 13;
 
-        }else if (width_phone<=720 && height_phone<=1184){
+        } else if (width_phone <= 720 && height_phone <= 1184) {
             width_height = 20;
-        }
-        else {
+        } else {
 
             width_height = 25;
         }
 
 
-        Log.i("TAG", "getSizeScreen: \n width="+width_phone+"\n"+"height="+height_phone);
+        Log.i("TAG", "getSizeScreen: \n width=" + width_phone + "\n" + "height=" + height_phone);
 
 
     }
-
 
     @Override
     public void onDestroy() {
-        if (runnable_image_slider_showShop != null) handler_image_slider_showShop.removeCallbacks(runnable_image_slider_showShop);
+        if (runnable_image_slider_showShop != null)
+            handler_image_slider_showShop.removeCallbacks(runnable_image_slider_showShop);
         super.onDestroy();
     }
-
-
-
 
 
 }

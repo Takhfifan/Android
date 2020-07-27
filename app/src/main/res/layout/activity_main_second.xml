@@ -413,7 +413,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="پیشنهادات امروز"
                                     android:textColor="#000"
-                                    android:textSize="22sp" />
+                                    android:textSize="19sp" />
 
 
                             </LinearLayout>
@@ -1069,7 +1069,7 @@
                                 android:layout_marginRight="8dp"
                                 android:text="جدیدترین ها"
                                 android:textColor="#292929"
-                                android:textSize="22sp" />
+                                android:textSize="19sp" />
 
                         </LinearLayout>
 
@@ -1857,7 +1857,7 @@
                                 android:layout_marginRight="8dp"
                                 android:text="پربازدیدترین ها"
                                 android:textColor="#292929"
-                                android:textSize="22sp" />
+                                android:textSize="19sp" />
 
                         </LinearLayout>
 
