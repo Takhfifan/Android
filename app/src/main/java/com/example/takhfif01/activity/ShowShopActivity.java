@@ -39,14 +39,14 @@ import java.util.List;
 
 public class ShowShopActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutAdressName,
-            linearLayoutMoreInfoName_showShop,
-            linearLayoutReadMoreName_showShop;
+    LinearLayout linearLayoutAdressName
+            /*,linearLayoutMoreInfoName_showShop,
+            linearLayoutReadMoreName_showShop*/;
     View linearLayoutAdressDetail,
-            linearLayoutMoreInfoDetail_showShop,
-            linearLayoutReadMoreDetail_showShop;
-    CardView cardViewAddress_showShop, cardViewMoreInfo_showShop, cardViewReadMore_showShop;
-    ImageView imageViewAddressArrow_showShop, imageViewMoreInfoArrow_showShop, imageViewReadMoreArrow_showShop;
+            linearLayoutMoreInfoDetail_showShop
+            /*,linearLayoutReadMoreDetail_showShop*/;
+    CardView cardViewAddress_showShop/*, cardViewMoreInfo_showShop, cardViewReadMore_showShop*/;
+    /*ImageView imageViewAddressArrow_showShop, imageViewMoreInfoArrow_showShop, imageViewReadMoreArrow_showShop;*/
 
 
     private int width_phone, height_phone, width_height;
@@ -78,9 +78,9 @@ public class ShowShopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_shop);
         init();
         setupSlider();
-        showAddress();
-        showMoreInfo();
-        showReadMore();
+        //showAddress();
+        //showMoreInfo();
+        //showReadMore();
 
     }
 
@@ -89,36 +89,36 @@ public class ShowShopActivity extends AppCompatActivity {
         linearLayoutAdressName = findViewById(R.id.linearLayoutAddressName_showShop);
         linearLayoutAdressDetail = findViewById(R.id.linearLayoutAddressDetail_showShop);
         cardViewAddress_showShop = findViewById(R.id.cardViewAddress_showShop);
-        imageViewAddressArrow_showShop = findViewById(R.id.imageViewAddressArrow_showShop);
-        cardViewMoreInfo_showShop = findViewById(R.id.cardViewMoreInfo_showShop);
+        //imageViewAddressArrow_showShop = findViewById(R.id.imageViewAddressArrow_showShop);
+        //cardViewMoreInfo_showShop = findViewById(R.id.cardViewMoreInfo_showShop);
         linearLayoutMoreInfoDetail_showShop = findViewById(R.id.linearLayoutMoreInfoDetail_showShop);
-        linearLayoutMoreInfoName_showShop = findViewById(R.id.linearLayoutMoreInfoName_showShop);
-        imageViewMoreInfoArrow_showShop = findViewById(R.id.imageViewMoreInfoArrow_showShop);
-        cardViewReadMore_showShop = findViewById(R.id.cardViewReadfMore_showShop);
-        linearLayoutReadMoreDetail_showShop = findViewById(R.id.linearLayoutReadfMoreDetail_showShop);
-        linearLayoutReadMoreName_showShop = findViewById(R.id.linearLayoutReadfMoreName_showShop);
-        imageViewReadMoreArrow_showShop = findViewById(R.id.imageViewReadfMoreArrow_showShop);
+        //linearLayoutMoreInfoName_showShop = findViewById(R.id.linearLayoutMoreInfoName_showShop);
+        //imageViewMoreInfoArrow_showShop = findViewById(R.id.imageViewMoreInfoArrow_showShop);
+        //cardViewReadMore_showShop = findViewById(R.id.cardViewReadfMore_showShop);
+        //linearLayoutReadMoreDetail_showShop = findViewById(R.id.linearLayoutReadfMoreDetail_showShop);
+        //linearLayoutReadMoreName_showShop = findViewById(R.id.linearLayoutReadfMoreName_showShop);
+        //imageViewReadMoreArrow_showShop = findViewById(R.id.imageViewReadfMoreArrow_showShop);
         nested_scroll_view = findViewById(R.id.nested_scroll_view_show_shop);
     }
 
 
-    private void showReadMore() {
-/*
-        linearLayoutReadMoreName_showShop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+ /*   private void showReadMore() {
 
-                if (linearLayoutReadMoreDetail_showShop.getVisibility()== View.GONE) {
-                    TransitionManager.beginDelayedTransition(cardViewReadMore_showShop);
-                    linearLayoutReadMoreDetail_showShop.setVisibility(View.VISIBLE);
-                    imageViewReadMoreArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_up_24_black);
-                }else {
-                    TransitionManager.endTransitions(cardViewReadMore_showShop);
-                    linearLayoutReadMoreDetail_showShop.setVisibility(View.GONE);
-                    imageViewReadMoreArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24_black);
-                }
-            }
-        });*/
+    //   linearLayoutReadMoreName_showShop.setOnClickListener(new View.OnClickListener() {
+    //       @Override
+    //       public void onClick(View v) {
+
+    //           if (linearLayoutReadMoreDetail_showShop.getVisibility()== View.GONE) {
+    //               TransitionManager.beginDelayedTransition(cardViewReadMore_showShop);
+    //               linearLayoutReadMoreDetail_showShop.setVisibility(View.VISIBLE);
+    //               imageViewReadMoreArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_up_24_black);
+    //           }else {
+    //               TransitionManager.endTransitions(cardViewReadMore_showShop);
+    //               linearLayoutReadMoreDetail_showShop.setVisibility(View.GONE);
+    //               imageViewReadMoreArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24_black);
+    //           }
+    //       }
+    //   });
 
 
         linearLayoutReadMoreName_showShop.setOnClickListener(new View.OnClickListener() {
@@ -129,26 +129,10 @@ public class ShowShopActivity extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 
-
-    private void showMoreInfo() {
 /*
-        linearLayoutMoreInfoName_showShop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (linearLayoutMoreInfoDetail_showShop.getVisibility()== View.GONE) {
-                    TransitionManager.beginDelayedTransition(cardViewMoreInfo_showShop);
-                    linearLayoutMoreInfoDetail_showShop.setVisibility(View.VISIBLE);
-                    imageViewMoreInfoArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_up_24_black);
-                }else {
-                    TransitionManager.endTransitions(cardViewMoreInfo_showShop);
-                    linearLayoutMoreInfoDetail_showShop.setVisibility(View.GONE);
-                    imageViewMoreInfoArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24_black);
-                }
-            }
-        });*/
+    private void showMoreInfo() {
         linearLayoutMoreInfoName_showShop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,26 +141,10 @@ public class ShowShopActivity extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 
-    private void showAddress() {
-/*
-        linearLayoutAdressName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+  /*  private void showAddress() {
 
-                if (linearLayoutAdressDetail.getVisibility()==View.GONE) {
-                    TransitionManager.beginDelayedTransition(cardViewAddress_showShop);
-                    linearLayoutAdressDetail.setVisibility(View.VISIBLE);
-                    imageViewAddressArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_up_24_black);
-                }else {
-                    TransitionManager.endTransitions(cardViewAddress_showShop);
-                    linearLayoutAdressDetail.setVisibility(View.GONE);
-                    imageViewAddressArrow_showShop.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24_black);
-                }
-            }
-        });
-*/
 
         linearLayoutAdressName.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,7 +153,7 @@ public class ShowShopActivity extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
 
     private void toggleAddressText(View view) {
         boolean show = toggleArrow(view);
@@ -202,21 +170,7 @@ public class ShowShopActivity extends AppCompatActivity {
 
     }
 
-    private void toggleDetailText(View view) {
-        boolean show = toggleArrow(view);
-        if (show) {
-            ViewAnimation.expand(linearLayoutMoreInfoDetail_showShop, new ViewAnimation.AnimListener() {
-                @Override
-                public void onFinish() {
-                    nestedScrollTo(nested_scroll_view, linearLayoutMoreInfoDetail_showShop);
-                }
-            });
-        } else {
-            ViewAnimation.collapse(linearLayoutMoreInfoDetail_showShop);
-        }
-
-    }
-
+/*
     private void toggleReadMoreText(View view) {
         boolean show = toggleArrow(view);
         if (show) {
@@ -231,7 +185,7 @@ public class ShowShopActivity extends AppCompatActivity {
         }
 
     }
-
+*/
     public boolean toggleArrow(View view) {
         if (view.getRotation() == 0) {
             view.animate().setDuration(200).rotation(180);
