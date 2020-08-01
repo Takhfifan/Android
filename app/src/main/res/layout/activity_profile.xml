@@ -54,13 +54,27 @@
                                 android:layout_alignParentEnd="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_centerHorizontal="true"
+                                android:layout_centerInParent="true"
                                 android:clickable="true"
                                 android:focusable="true"
                                 android:foreground="?android:attr/selectableItemBackground"
                                 android:src="@drawable/cancel_24" />
 
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="اطلاعات کاربری"
+                                android:textColor="#fff"
+                                android:layout_marginRight="8dp"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:layout_centerInParent="true"
+                                android:layout_toLeftOf="@id/btnBackProfile"
+                                />
+
                             <ImageView
                                 android:layout_width="30dp"
+                                android:layout_centerInParent="true"
                                 android:layout_height="30dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentLeft="true"
