@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
 
-    <com.example.takhfif01.fonts.MyTextView
+    <com.example.takhfif01.widget.fonts.MyTextView
         android:textColor="#000"
         android:textSize="18sp"
         android:text="حذف شماره تلفن همراه"
@@ -20,7 +20,7 @@
         android:background="#C6C6C6"/>
 
 
-    <com.example.takhfif01.fonts.MyTextView
+    <com.example.takhfif01.widget.fonts.MyTextView
         android:layout_margin="8dp"
         android:textColor="@color/red_400"
         android:textSize="16sp"
@@ -37,7 +37,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-    <com.example.takhfif01.fonts.MyTextView
+    <com.example.takhfif01.widget.fonts.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="شماره تلفن همراه"
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.takhfif01.fonts.MyEditText
+        <com.example.takhfif01.widget.fonts.MyEditText
             android:focusedByDefault="false"
             android:focusable="false"
             android:enabled="false"
@@ -82,7 +82,7 @@
 
 
 
-    <com.example.takhfif01.fonts.MyButton
+    <com.example.takhfif01.widget.fonts.MyButton
         android:id="@+id/btn_chane_number_profile"
         android:layout_width="match_parent"
         android:layout_height="55dp"

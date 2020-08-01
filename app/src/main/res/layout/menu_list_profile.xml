@@ -32,7 +32,7 @@
                 android:tint="@color/colorPrimary"/>
 
 
-            <com.example.takhfif01.fonts.MyTextView
+            <com.example.takhfif01.widget.fonts.MyTextView
                 android:id="@+id/txtTitleProfileMenuList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

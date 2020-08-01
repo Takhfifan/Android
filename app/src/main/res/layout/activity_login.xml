@@ -52,7 +52,7 @@
                                     android:orientation="vertical"
                                     android:padding="20dp">
 
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
@@ -63,7 +63,7 @@
                                         android:textColor="@color/green_500"
                                         android:textStyle="bold" />
 
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="نام"
@@ -89,7 +89,7 @@
                                         android:layout_height="20dp" />
 
 
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="نام خانوادگی"
@@ -116,7 +116,7 @@
                                         android:layout_height="20dp" />
 
 
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="شماره موبایل"
@@ -141,7 +141,7 @@
                                         android:layout_width="0dp"
                                         android:layout_height="20dp" />
 
-                                    <com.example.takhfif01.fonts.MyButton
+                                    <com.example.takhfif01.widget.fonts.MyButton
                                         android:layout_width="match_parent"
                                         android:layout_height="55dp"
                                         android:layout_marginLeft="-4dp"

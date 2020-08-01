@@ -51,7 +51,7 @@
                             android:layout_height="wrap_content">
 
 
-                            <com.example.takhfif01.fonts.MyTextView
+                            <com.example.takhfif01.widget.fonts.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
@@ -78,7 +78,7 @@
                     </androidx.appcompat.widget.Toolbar>
 
 
-                    <com.example.takhfif01.fonts.MyTextView
+                    <com.example.takhfif01.widget.fonts.MyTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -97,7 +97,7 @@
                         android:orientation="horizontal">
 
 
-                        <com.example.takhfif01.fonts.MyEditText
+                        <com.example.takhfif01.widget.fonts.MyEditText
                             android:id="@+id/showNumber_getcode"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -143,7 +143,7 @@
 
 
 
-                    <com.example.takhfif01.fonts.MyTextView
+                    <com.example.takhfif01.widget.fonts.MyTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -162,7 +162,7 @@
                         android:layout_height="wrap_content">
 
 
-                        <com.example.takhfif01.fonts.MyEditText
+                        <com.example.takhfif01.widget.fonts.MyEditText
                             android:id="@+id/number_getcode"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -192,7 +192,7 @@
                                                 android:layoutDirection="ltr"
                                                 android:orientation="horizontal">
 
-                                            <com.example.takhfif01.fonts.MyEditText
+                                            <com.example.takhfif01.widget.fonts.MyEditText
                                                 android:id="@+id/number1_getcode"
                                                 android:layout_width="0dp"
                                                 android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
                                                 android:theme="@style/EditText.Grey" />
 
 
-                                            <com.example.takhfif01.fonts.MyEditText
+                                            <com.example.takhfif01.widget.fonts.MyEditText
                                                 android:id="@+id/number2_getcode"
                                                 android:layout_width="0dp"
                                                 android:layout_height="wrap_content"
@@ -222,7 +222,7 @@
                                                 android:theme="@style/EditText.Grey" />
 
 
-                                            <com.example.takhfif01.fonts.MyEditText
+                                            <com.example.takhfif01.widget.fonts.MyEditText
                                                 android:id="@+id/number3_getcode"
                                                 android:layout_width="0dp"
                                                 android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
                                                 android:theme="@style/EditText.Grey" />
 
 
-                                            <com.example.takhfif01.fonts.MyEditText
+                                            <com.example.takhfif01.widget.fonts.MyEditText
                                                 android:id="@+id/number4_getcode"
                                                 android:layout_width="0dp"
                                                 android:layout_height="wrap_content"
@@ -268,7 +268,7 @@
     </ScrollView>
 
 
-    <com.example.takhfif01.fonts.MyButton
+    <com.example.takhfif01.widget.fonts.MyButton
         android:id="@+id/btn_login_send"
         android:layout_width="200dp"
         android:layout_height="wrap_content"

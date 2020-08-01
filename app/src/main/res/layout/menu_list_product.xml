@@ -7,7 +7,7 @@
     >
 
 
-    <com.example.takhfif01.fonts.MyTextView
+    <com.example.takhfif01.widget.fonts.MyTextView
         android:id="@+id/productTitleItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.9">
 
-            <com.example.takhfif01.fonts.MyTextView
+            <com.example.takhfif01.widget.fonts.MyTextView
                 android:id="@+id/productTitleItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

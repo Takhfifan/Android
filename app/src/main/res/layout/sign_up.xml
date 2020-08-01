@@ -54,7 +54,7 @@
                         android:orientation="vertical"
                         android:padding="20dp">
 
-                        <com.example.takhfif01.fonts.MyTextView
+                        <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -66,7 +66,7 @@
                             android:textSize="26sp"
                             android:textStyle="bold" />
 
-                        <com.example.takhfif01.fonts.MyTextView
+                        <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="نام"
@@ -78,7 +78,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <com.example.takhfif01.fonts.MyEditText
+                            <com.example.takhfif01.widget.fonts.MyEditText
                                 android:id="@+id/name_signup"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
 
 
 
-                        <com.example.takhfif01.fonts.MyTextView
+                        <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="نام خانوادگی"
@@ -107,7 +107,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <com.example.takhfif01.fonts.MyEditText
+                            <com.example.takhfif01.widget.fonts.MyEditText
                                 android:id="@+id/lastname_signup"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
 
 
 
-                        <com.example.takhfif01.fonts.MyTextView
+                        <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="شماره موبایل"
@@ -137,7 +137,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <com.example.takhfif01.fonts.MyEditText
+                            <com.example.takhfif01.widget.fonts.MyEditText
                                 android:id="@+id/number_signup"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
                             android:layout_width="0dp"
                             android:layout_height="20dp" />
 
-                        <com.example.takhfif01.fonts.MyButton
+                        <com.example.takhfif01.widget.fonts.MyButton
                             android:id="@+id/btn_login_getKey"
                             android:layout_width="match_parent"
                             android:layout_height="55dp"

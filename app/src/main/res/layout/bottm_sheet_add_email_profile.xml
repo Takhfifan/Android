@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
 
-    <com.example.takhfif01.fonts.MyTextView
+    <com.example.takhfif01.widget.fonts.MyTextView
         android:textColor="#000"
         android:textSize="18sp"
         android:text="اضافه کردن پست الکترونیک"
@@ -27,7 +27,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-    <com.example.takhfif01.fonts.MyTextView
+    <com.example.takhfif01.widget.fonts.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="پست الکترونیک"
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.takhfif01.fonts.MyEditText
+        <com.example.takhfif01.widget.fonts.MyEditText
             android:focusedByDefault="false"
             android:id="@+id/email_add_profile"
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
 
 
 
-    <com.example.takhfif01.fonts.MyButton
+    <com.example.takhfif01.widget.fonts.MyButton
         android:id="@+id/btn_add_email"
         android:layout_width="match_parent"
         android:layout_height="55dp"

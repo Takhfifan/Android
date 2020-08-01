@@ -25,7 +25,7 @@
         />
 
 
-    <com.example.takhfif01.fonts.MyButton
+    <com.example.takhfif01.widget.fonts.MyButton
         android:id="@+id/btn_submit"
         android:layout_width="200dp"
         android:layout_height="50dp"

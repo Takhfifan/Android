@@ -11,6 +11,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.media.Image;
@@ -39,9 +40,14 @@ import java.util.List;
 
 public class ShowShopActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutAdressName
+    LinearLayout linearLayoutAdressName,
+            linear_goto_more_address,
+            linear_goto_more_description;
+
             /*,linearLayoutMoreInfoName_showShop,
-            linearLayoutReadMoreName_showShop*/;
+            linearLayoutReadMoreName_showShop;*/
+
+
     View linearLayoutAdressDetail,
             linearLayoutMoreInfoDetail_showShop
             /*,linearLayoutReadMoreDetail_showShop*/;
@@ -67,9 +73,9 @@ public class ShowShopActivity extends AppCompatActivity {
 
 
     private NestedScrollView nested_scroll_view;
-    private ImageButton bt_toggle_text, bt_toggle_input;
+    /*private ImageButton bt_toggle_text, bt_toggle_input;
     private Button bt_hide_text, bt_save_input, bt_hide_input;
-    private View lyt_expand_text, lyt_expand_input;
+    private View lyt_expand_text, lyt_expand_input;*/
 
 
     @Override
@@ -78,6 +84,8 @@ public class ShowShopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_shop);
         init();
         setupSlider();
+        goToMoreInfo();
+        goToMoreDescription();
         //showAddress();
         //showMoreInfo();
         //showReadMore();
@@ -86,19 +94,41 @@ public class ShowShopActivity extends AppCompatActivity {
 
 
     private void init() {
-        linearLayoutAdressName = findViewById(R.id.linearLayoutAddressName_showShop);
-        linearLayoutAdressDetail = findViewById(R.id.linearLayoutAddressDetail_showShop);
-        cardViewAddress_showShop = findViewById(R.id.cardViewAddress_showShop);
         //imageViewAddressArrow_showShop = findViewById(R.id.imageViewAddressArrow_showShop);
         //cardViewMoreInfo_showShop = findViewById(R.id.cardViewMoreInfo_showShop);
-        linearLayoutMoreInfoDetail_showShop = findViewById(R.id.linearLayoutMoreInfoDetail_showShop);
         //linearLayoutMoreInfoName_showShop = findViewById(R.id.linearLayoutMoreInfoName_showShop);
         //imageViewMoreInfoArrow_showShop = findViewById(R.id.imageViewMoreInfoArrow_showShop);
         //cardViewReadMore_showShop = findViewById(R.id.cardViewReadfMore_showShop);
         //linearLayoutReadMoreDetail_showShop = findViewById(R.id.linearLayoutReadfMoreDetail_showShop);
         //linearLayoutReadMoreName_showShop = findViewById(R.id.linearLayoutReadfMoreName_showShop);
         //imageViewReadMoreArrow_showShop = findViewById(R.id.imageViewReadfMoreArrow_showShop);
+        linearLayoutAdressName = findViewById(R.id.linearLayoutAddressName_showShop);
+        linearLayoutAdressDetail = findViewById(R.id.linearLayoutAddressDetail_showShop);
+        cardViewAddress_showShop = findViewById(R.id.cardViewAddress_showShop);
+        linearLayoutMoreInfoDetail_showShop = findViewById(R.id.linearLayoutMoreInfoDetail_showShop);
         nested_scroll_view = findViewById(R.id.nested_scroll_view_show_shop);
+        linear_goto_more_address = findViewById(R.id.linear_goto_more_address);
+        linear_goto_more_description = findViewById(R.id.linear_goto_more_description);
+    }
+
+    private void goToMoreDescription() {
+        linear_goto_more_description.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShowShopActivity.this, MoreInfoShopActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void goToMoreInfo() {
+        linear_goto_more_address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShowShopActivity.this, MoreInfoShopActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -154,7 +184,7 @@ public class ShowShopActivity extends AppCompatActivity {
             }
         });
     }*/
-
+/*
     private void toggleAddressText(View view) {
         boolean show = toggleArrow(view);
         if (show) {
@@ -169,7 +199,7 @@ public class ShowShopActivity extends AppCompatActivity {
         }
 
     }
-
+*/
 /*
     private void toggleReadMoreText(View view) {
         boolean show = toggleArrow(view);

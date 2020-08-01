@@ -60,7 +60,7 @@
                                     android:gravity="center"
                                     android:padding="8dp">
 
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="فروشگاه های ورزشی"
@@ -83,7 +83,7 @@
                                     android:gravity="center"
                                     android:padding="8dp">
 
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="فست فودی"
@@ -106,7 +106,7 @@
                                     android:gravity="center"
                                     android:padding="8dp">
 
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="رستوران"
@@ -129,7 +129,7 @@
                                     android:gravity="center"
                                     android:padding="8dp">
 
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="فروشگاه های لوازم ماشین"
@@ -152,7 +152,7 @@
                                     android:gravity="center"
                                     android:padding="8dp">
 
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="سلامت و بهداشت و زیبایی"
@@ -201,7 +201,7 @@
                                         android:src="@drawable/ic_baseline_account_balance_wallet_48"/>
                                 </androidx.cardview.widget.CardView>
 
-                                <com.example.takhfif01.fonts.MyTextView
+                                <com.example.takhfif01.widget.fonts.MyTextView
                                     android:layout_marginTop="4dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -239,7 +239,7 @@
                                         android:src="@drawable/ic_baseline_person_24"/>
                                 </androidx.cardview.widget.CardView>
 
-                                <com.example.takhfif01.fonts.MyTextView
+                                <com.example.takhfif01.widget.fonts.MyTextView
                                     android:layout_marginTop="4dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -276,7 +276,7 @@
                                         android:src="@drawable/ic_baseline_favorite_24"/>
                                 </androidx.cardview.widget.CardView>
 
-                                <com.example.takhfif01.fonts.MyTextView
+                                <com.example.takhfif01.widget.fonts.MyTextView
                                     android:layout_marginTop="4dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
                                         android:src="@drawable/ic_baseline_format_list_bulleted_24"/>
                                 </androidx.cardview.widget.CardView>
 
-                                <com.example.takhfif01.fonts.MyTextView
+                                <com.example.takhfif01.widget.fonts.MyTextView
                                     android:layout_marginTop="4dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -408,7 +408,7 @@
                                 android:gravity="right"
                                 android:orientation="horizontal">
 
-                                <com.example.takhfif01.fonts.MyTextView
+                                <com.example.takhfif01.widget.fonts.MyTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="پیشنهادات امروز"
@@ -475,7 +475,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -498,7 +498,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -520,7 +520,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -583,7 +583,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -606,7 +606,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -628,7 +628,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -691,7 +691,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -714,7 +714,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -736,7 +736,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -799,7 +799,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -822,7 +822,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -844,7 +844,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -907,7 +907,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -930,7 +930,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -952,7 +952,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -1002,7 +1002,7 @@
                                         android:layout_height="wrap_content"
                                         android:tint="@color/colorPrimary"
                                         android:src="@drawable/ic_baseline_arrow_back_24"/>
-                                    <com.example.takhfif01.fonts.MyTextView
+                                    <com.example.takhfif01.widget.fonts.MyTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="مشاهده همه"
@@ -1043,7 +1043,7 @@
 
 
 
-                            <com.example.takhfif01.fonts.MyButton
+                            <com.example.takhfif01.widget.fonts.MyButton
                                 android:layout_marginLeft="8dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
@@ -1063,7 +1063,7 @@
                             android:gravity="right|center">
 
 
-                            <com.example.takhfif01.fonts.MyTextView
+                            <com.example.takhfif01.widget.fonts.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="8dp"
@@ -1128,7 +1128,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -1151,7 +1151,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -1173,7 +1173,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -1237,7 +1237,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -1260,7 +1260,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -1282,7 +1282,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -1346,7 +1346,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -1369,7 +1369,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -1391,7 +1391,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -1455,7 +1455,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -1478,7 +1478,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -1500,7 +1500,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -1564,7 +1564,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -1587,7 +1587,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -1609,7 +1609,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -1831,7 +1831,7 @@
 
 
 
-                            <com.example.takhfif01.fonts.MyButton
+                            <com.example.takhfif01.widget.fonts.MyButton
                                 android:layout_marginLeft="8dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
@@ -1851,7 +1851,7 @@
                             android:gravity="right|center">
 
 
-                            <com.example.takhfif01.fonts.MyTextView
+                            <com.example.takhfif01.widget.fonts.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="8dp"
@@ -1916,7 +1916,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -1939,7 +1939,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -1961,7 +1961,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -2025,7 +2025,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -2048,7 +2048,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -2070,7 +2070,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -2134,7 +2134,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -2157,7 +2157,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -2179,7 +2179,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -2243,7 +2243,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -2266,7 +2266,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -2288,7 +2288,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -2352,7 +2352,7 @@
                                         android:paddingTop="8dp"
                                         android:paddingRight="4dp">
 
-                                        <com.example.takhfif01.fonts.MyTextView
+                                        <com.example.takhfif01.widget.fonts.MyTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center|right"
@@ -2375,7 +2375,7 @@
                                                 android:layout_height="16dp"
                                                 android:src="@drawable/ic_baseline_location_on_24" />
 
-                                            <com.example.takhfif01.fonts.MyTextView
+                                            <com.example.takhfif01.widget.fonts.MyTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:ellipsize="end"
@@ -2397,7 +2397,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-                                                <com.example.takhfif01.fonts.MyTextView
+                                                <com.example.takhfif01.widget.fonts.MyTextView
 
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"

@@ -56,7 +56,7 @@
                         android:layout_height="24dp"
                         android:layout_gravity="center|bottom"/>
 
-                    <com.example.takhfif01.fonts.MyTextView
+                    <com.example.takhfif01.widget.fonts.MyTextView
                         android:id="@+id/txtUserName_nav"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
                     android:visibility="gone"
                     >
 
-                    <com.example.takhfif01.fonts.MyTextView
+                    <com.example.takhfif01.widget.fonts.MyTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/txtInfo_nav"
@@ -101,7 +101,7 @@
                         android:textColor="#FFF"
                         android:layout_marginBottom="8dp"/>
 
-                    <com.example.takhfif01.fonts.MyTextView
+                    <com.example.takhfif01.widget.fonts.MyTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/txtexit_nav"
@@ -134,13 +134,13 @@
                         android:paddingTop="8dp">
 
 
-                        <com.example.takhfif01.fonts.MyTextView
+                        <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="تومان"
                             android:textSize="13sp"/>
 
-                        <com.example.takhfif01.fonts.MyTextView
+                        <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_marginLeft="4dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
                         android:gravity="right|center"
                         android:paddingRight="16dp">
 
-                        <com.example.takhfif01.fonts.MyTextView
+                        <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="8dp"
@@ -199,7 +199,7 @@
                         android:layoutDirection="rtl"/>
                 </LinearLayout>
 
-                <com.example.takhfif01.fonts.MyTextView
+                <com.example.takhfif01.widget.fonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -229,7 +229,7 @@
 
                 </LinearLayout>
 
-                <com.example.takhfif01.fonts.MyTextView
+                <com.example.takhfif01.widget.fonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"

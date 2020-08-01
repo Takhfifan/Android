@@ -1,4 +1,4 @@
-package com.example.takhfif01.fonts;
+package com.example.takhfif01.widget.fonts;
 
 
 import android.annotation.SuppressLint;

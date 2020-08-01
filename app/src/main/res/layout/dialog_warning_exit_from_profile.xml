@@ -26,7 +26,7 @@
             app:srcCompat="@drawable/ic_baseline_exit_to_app_24"
             tools:ignore="VectorDrawableCompat" />
 
-        <com.example.takhfif01.fonts.MyTextView
+        <com.example.takhfif01.widget.fonts.MyTextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <com.example.takhfif01.fonts.MyTextView
+        <com.example.takhfif01.widget.fonts.MyTextView
             android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
         android:layout_marginBottom="15dp"
         android:gravity="center"
         android:orientation="horizontal">
-        <com.example.takhfif01.fonts.MyButton
+        <com.example.takhfif01.widget.fonts.MyButton
             android:id="@+id/bt_not_close_dialog_exit_from_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
             android:textSize="20sp"
             android:textColor="@android:color/white" />
 
-        <com.example.takhfif01.fonts.MyButton
+        <com.example.takhfif01.widget.fonts.MyButton
             android:id="@+id/bt_close_dialog_exit_from_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

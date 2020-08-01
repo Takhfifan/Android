@@ -38,7 +38,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <com.example.takhfif01.fonts.MyTextView
+                <com.example.takhfif01.widget.fonts.MyTextView
                     android:id="@+id/txtTitleProfileEditMenuList"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                     android:text="نام کاربری"
                     android:textSize="15sp" />
 
-                <com.example.takhfif01.fonts.MyTextView
+                <com.example.takhfif01.widget.fonts.MyTextView
                     android:id="@+id/txtDescProfileEditMenuList"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
