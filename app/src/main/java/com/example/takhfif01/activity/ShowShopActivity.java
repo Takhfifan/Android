@@ -116,8 +116,14 @@ public class ShowShopActivity extends AppCompatActivity {
     }
 
     private void goToCommentActivity() {
-        Intent intent = new Intent(ShowShopActivity.this, CommentActivity.class);
-        startActivity(intent);
+        btn_goto_comment_activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(ShowShopActivity.this, CommentActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void goToMoreDescription() {
