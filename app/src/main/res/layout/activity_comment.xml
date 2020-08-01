@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CommentActivity">
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/btnBack_comment_activity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:src="@drawable/cancel_24" />
+
+                <com.example.takhfif01.widget.fonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نظرات"
+                    android:layout_marginRight="8dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/btnBack_comment_activity"/>
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:paddingRight="8dp"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="16dp"
+                    android:gravity="right"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:layout_marginBottom="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="امتیاز کلی"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/grey_95"/>
+
+
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:max="5"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.7"
+                            android:layout_height="10dp"
+                            android:indeterminate="false"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:progress="40"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="40dp"
+                            android:progressDrawable="@drawable/progressbar_comment"/>
+
+                        <TextView
+                            android:layout_marginRight="16dp"
+                            android:textColor="#464646"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="20dp"
+                            android:text="نوآوری"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:max="5"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.7"
+                            android:layout_height="10dp"
+                            android:indeterminate="false"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:progress="40"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="40dp"
+                            android:progressDrawable="@drawable/progressbar_comment"/>
+
+                        <TextView
+                            android:layout_marginRight="16dp"
+                            android:textColor="#464646"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="20dp"
+                            android:text="نوآوری"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:max="5"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.7"
+                            android:layout_height="10dp"
+                            android:indeterminate="false"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:progress="40"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="40dp"
+                            android:progressDrawable="@drawable/progressbar_comment"/>
+
+                        <TextView
+                            android:layout_marginRight="16dp"
+                            android:textColor="#464646"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="20dp"
+                            android:text="نوآوری"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:max="5"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.7"
+                            android:layout_height="10dp"
+                            android:indeterminate="false"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:progress="40"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="40dp"
+                            android:progressDrawable="@drawable/progressbar_comment"/>
+
+                        <TextView
+                            android:layout_marginRight="16dp"
+                            android:textColor="#464646"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="20dp"
+                            android:text="نوآوری"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

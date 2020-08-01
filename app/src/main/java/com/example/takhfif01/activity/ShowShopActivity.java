@@ -54,6 +54,8 @@ public class ShowShopActivity extends AppCompatActivity {
     CardView cardViewAddress_showShop/*, cardViewMoreInfo_showShop, cardViewReadMore_showShop*/;
     /*ImageView imageViewAddressArrow_showShop, imageViewMoreInfoArrow_showShop, imageViewReadMoreArrow_showShop;*/
 
+    private Button btn_goto_comment_activity;
+
 
     private int width_phone, height_phone, width_height;
 
@@ -86,6 +88,7 @@ public class ShowShopActivity extends AppCompatActivity {
         setupSlider();
         goToMoreInfo();
         goToMoreDescription();
+        goToCommentActivity();
         //showAddress();
         //showMoreInfo();
         //showReadMore();
@@ -109,6 +112,12 @@ public class ShowShopActivity extends AppCompatActivity {
         nested_scroll_view = findViewById(R.id.nested_scroll_view_show_shop);
         linear_goto_more_address = findViewById(R.id.linear_goto_more_address);
         linear_goto_more_description = findViewById(R.id.linear_goto_more_description);
+        btn_goto_comment_activity = findViewById(R.id.btn_goto_comment_activity);
+    }
+
+    private void goToCommentActivity() {
+        Intent intent = new Intent(ShowShopActivity.this, CommentActivity.class);
+        startActivity(intent);
     }
 
     private void goToMoreDescription() {
