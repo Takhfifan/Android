@@ -289,7 +289,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_gravity="bottom|right"
-        android:text="extended_fab_label"
-        app:icon="@drawable/barg_64"/>
+        android:text="tring/extended_fab_label"
+        app:icon="@drawable/ic_baseline_person_24_primary_color"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
