@@ -2,6 +2,8 @@
 
 Source code of Takhfifan client Android application.
 
+<img src="screenshots/Screenshot_1596294576.png" width="300">
+
 ### Contributors
 
 - **Mahdi Razaghi:** Android Developer
