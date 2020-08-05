@@ -24,8 +24,9 @@
 
                 <ImageView
                     android:id="@+id/btnBack_comment_activity"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="8dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerHorizontal="true"
@@ -81,6 +82,8 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="2">
 
+
+                                <!--
                                 <RatingBar
                                     android:layout_marginRight="16dp"
                                     style="?android:attr/ratingBarStyleSmall"
@@ -88,7 +91,7 @@
                                     android:layout_height="wrap_content"
                                     android:isIndicator="true"
                                     android:numStars="5"
-                                    android:stepSize="0.1" />
+                                    android:stepSize="0.1" />-->
                             </LinearLayout>
                             <LinearLayout
                                 android:gravity="center|right"
@@ -119,7 +122,7 @@
 
 
 
-<!--
+
                         <LinearLayout
                             android:gravity="center"
                             android:layout_marginTop="8dp"
@@ -303,8 +306,6 @@
                             </LinearLayout>
 
                         </LinearLayout>
--->
-
 
 
                     </LinearLayout>
@@ -432,7 +433,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:layout_marginBottom="16dp"
                             android:paddingRight="16dp"
                             android:paddingLeft="8dp"
                             android:textSize="13sp"
@@ -441,25 +441,40 @@
 
 
 
-                        <RatingBar
-                            android:layout_gravity="center"
-                            style="?android:attr/ratingBarStyleSmall"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:isIndicator="true"
-                            android:numStars="5"
-                            android:stepSize="0.1" />
-
                         <LinearLayout
-                            android:gravity="center|left"
+                            android:padding="8dp"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <com.example.takhfif01.widget.fonts.MyTextView
-                                android:padding="8dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="2ماه پیش "/>
+                            <LinearLayout
+                                android:gravity="center|left"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <RatingBar
+                                    android:layout_gravity="center"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:isIndicator="true"
+                                    android:numStars="5"
+                                    android:stepSize="0.1" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:gravity="center|right"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2ماه پیش "/>
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -589,7 +604,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:layout_marginBottom="16dp"
                             android:paddingRight="16dp"
                             android:paddingLeft="8dp"
                             android:textSize="13sp"
@@ -597,28 +611,43 @@
                             android:text="اصلا جالب نبود رسیدگی نمیکردن خیلی هم بد حرف میزدن"/>
 
 
-
-                        <RatingBar
-                            android:layout_gravity="center"
-                            style="?android:attr/ratingBarStyleSmall"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:isIndicator="true"
-                            android:numStars="5"
-                            android:stepSize="0.1" />
-
                         <LinearLayout
-                            android:gravity="center|left"
+                            android:padding="8dp"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <com.example.takhfif01.widget.fonts.MyTextView
-                                android:padding="8dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="2ماه پیش "/>
+                            <LinearLayout
+                                android:gravity="center|left"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <RatingBar
+                                    android:layout_gravity="center"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:isIndicator="true"
+                                    android:numStars="5"
+                                    android:stepSize="0.1" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:gravity="center|right"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2ماه پیش "/>
+
+                            </LinearLayout>
 
                         </LinearLayout>
+
 
 
                     </LinearLayout>
@@ -747,7 +776,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:layout_marginBottom="16dp"
                             android:paddingRight="16dp"
                             android:paddingLeft="8dp"
                             android:textSize="13sp"
@@ -756,25 +784,40 @@
 
 
 
-                        <RatingBar
-                            android:layout_gravity="center"
-                            style="?android:attr/ratingBarStyleSmall"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:isIndicator="true"
-                            android:numStars="5"
-                            android:stepSize="0.1" />
-
                         <LinearLayout
-                            android:gravity="center|left"
+                            android:padding="8dp"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <com.example.takhfif01.widget.fonts.MyTextView
-                                android:padding="8dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="2ماه پیش "/>
+                            <LinearLayout
+                                android:gravity="center|left"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <RatingBar
+                                    android:layout_gravity="center"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:isIndicator="true"
+                                    android:numStars="5"
+                                    android:stepSize="0.1" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:gravity="center|right"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2ماه پیش "/>
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -904,7 +947,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:layout_marginBottom="16dp"
                             android:paddingRight="16dp"
                             android:paddingLeft="8dp"
                             android:textSize="13sp"
@@ -912,28 +954,43 @@
                             android:text="اصلا جالب نبود رسیدگی نمیکردن خیلی هم بد حرف میزدن"/>
 
 
-
-                        <RatingBar
-                            android:layout_gravity="center"
-                            style="?android:attr/ratingBarStyleSmall"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:isIndicator="true"
-                            android:numStars="5"
-                            android:stepSize="0.1" />
-
                         <LinearLayout
-                            android:gravity="center|left"
+                            android:padding="8dp"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <com.example.takhfif01.widget.fonts.MyTextView
-                                android:padding="8dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="2ماه پیش "/>
+                            <LinearLayout
+                                android:gravity="center|left"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <RatingBar
+                                    android:layout_gravity="center"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:isIndicator="true"
+                                    android:numStars="5"
+                                    android:stepSize="0.1" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:gravity="center|right"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2ماه پیش "/>
+
+                            </LinearLayout>
 
                         </LinearLayout>
+
 
 
                     </LinearLayout>
@@ -953,12 +1010,13 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_goto_set_comment"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:selectableItemBackground"
         app:cardCornerRadius="30dp"
         android:layout_margin="16dp"
-        android:layout_gravity="bottom|right"
+        android:layout_gravity="bottom|left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <LinearLayout

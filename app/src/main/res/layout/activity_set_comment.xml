@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SetCommentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/btnBack_comment_activity"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/cancel_24" />
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/btnBack_comment_activity"
+                android:text="ثبت نظر"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="32dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:orientation="vertical">
+
+                <com.example.takhfif01.widget.fonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="عنوان نظر"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.example.takhfif01.widget.fonts.MyEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:theme="@style/EditText.Grey" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:layoutDirection="rtl"
+                android:orientation="vertical">
+
+                <com.example.takhfif01.widget.fonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="متن نظر"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.example.takhfif01.widget.fonts.MyEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:inputType="textMultiLine"
+                        android:maxLength="250"
+                        android:textSize="14sp"
+                        android:theme="@style/EditText.Grey" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/linear_setPoint_set_comment"
+                    android:orientation="horizontal"
+                    android:gravity="center|right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:id="@+id/setPoinedt_set_comment"
+                        android:textSize="13sp"
+                        style="@style/EditText.Flat.Grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="انتخاب کنید"
+                        android:textColor="@color/grey_600"/>
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_drop_grey"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="right|center">
+
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:ellipsize="end"
+                        android:maxEms="15"
+                        android:maxLines="1"
+                        android:text="ارزش خرید به نسبت قیمت"
+                        android:textColor="#353535"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:gravity="center|right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="13sp"
+                        style="@style/EditText.Flat.Grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="انتخاب کنید"
+                        android:textColor="@color/grey_600"/>
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_drop_grey"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="right|center">
+
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:ellipsize="end"
+                        android:maxEms="15"
+                        android:maxLines="1"
+                        android:text="ارزش خرید به نسبت قیمت"
+                        android:textColor="#353535"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:gravity="center|right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="13sp"
+                        style="@style/EditText.Flat.Grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="انتخاب کنید"
+                        android:textColor="@color/grey_600"/>
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_drop_grey"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="right|center">
+
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:ellipsize="end"
+                        android:maxEms="15"
+                        android:maxLines="1"
+                        android:text="ارزش خرید به نسبت قیمت"
+                        android:textColor="#353535"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:gravity="center|right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="13sp"
+                        style="@style/EditText.Flat.Grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="انتخاب کنید"
+                        android:textColor="@color/grey_600"/>
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_drop_grey"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="right|center">
+
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:ellipsize="end"
+                        android:maxEms="15"
+                        android:maxLines="1"
+                        android:text="ارزش خرید به نسبت قیمت"
+                        android:textColor="#353535"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <com.example.takhfif01.widget.fonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="آیا این مکان را برای دیگران پیشنهاد میکنید؟"
+                    android:textColor="@color/grey_90"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center|right"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <com.example.takhfif01.widget.fonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="نظری ندارم!"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="8dp"/>
+
+                        <RadioButton
+                            android:id="@+id/noIdea_radiobtn_set_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <com.example.takhfif01.widget.fonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="این مکان رو پیشنهاد میکنم"
+                            android:textColor="@color/green_600"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/ic_baseline_thumb_up_alt_24_like_grey"
+                            android:tint="@color/green_600" />
+
+
+                        <RadioButton
+                            android:id="@+id/good_radiobtn_set_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <com.example.takhfif01.widget.fonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="این مکان رو پیشنهاد نمیکنم"
+                            android:textColor="@color/red_700"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/ic_baseline_thumb_down_24_dislike_grey"
+                            android:tint="@color/red_700" />
+
+                        <RadioButton
+                            android:id="@+id/bad_radiobtn_set_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+<!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <com.example.takhfif01.widget.fonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="آیا این مکان را برای دیگران پیشنهاد میکنید؟"
+                    android:textColor="@color/grey_90"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:orientation="horizontal">
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="نظری ندارم!"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"/>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:orientation="horizontal">
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="این مکان رو پیشنهاد میکنم"
+                        android:textColor="@color/green_600"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/ic_baseline_thumb_up_alt_24_like_grey"
+                        android:tint="@color/green_600" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:orientation="horizontal">
+
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="این مکان رو پیشنهاد نمیکنم"
+                        android:textColor="@color/red_700"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/ic_baseline_thumb_down_24_dislike_grey"
+                        android:tint="@color/red_700" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+-->
+            <com.example.takhfif01.widget.fonts.MyButton
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_background_button_view_all"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/grey_5"
+                android:text="ثبت نظر"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

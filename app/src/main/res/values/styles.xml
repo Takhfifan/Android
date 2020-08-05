@@ -33,6 +33,22 @@
     </style>
 
 
+    <style name="EditText.White" parent="@style/AppTheme">
+        <item name="colorControlActivated">@color/grey_700</item>
+        <item name="colorControlHighlight">@color/grey_600</item>
+        <item name="colorControlNormal">@color/grey_700</item>
+    </style>
+
+    <style name="EditText.White.Hint" parent="@style/EditText.White">
+        <item name="colorAccent">@color/grey_600</item>
+        <item name="android:textColorHint">@color/grey_600</item>
+    </style>
+
+    <style name="EditText.Flat.Grey" parent="@style/AppTheme">
+        <item name="android:textColorHint">@color/grey_40</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textColor">@color/grey_90</item>
+    </style>
 
 
     <style name="AppBottomSheetDialogTheme"

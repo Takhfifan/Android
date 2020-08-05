@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:replace="android:theme">
-        <activity android:name=".activity.CommentActivity"></activity>
+        <activity android:name=".activity.SetCommentActivity"></activity>
+        <activity android:name=".activity.CommentActivity" />
         <activity android:name=".activity.MoreInfoShopActivity" />
         <activity android:name=".activity.ShowShopActivity" />
         <activity android:name=".activity.ProfileActivity" />

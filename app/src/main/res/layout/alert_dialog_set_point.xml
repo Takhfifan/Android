@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:gravity="right|center"
+    android:padding="16dp">
+
+    <com.example.takhfif01.widget.fonts.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="انتخاب کنید"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="خیلی بد"
+                android:textStyle="bold"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp"
+                android:layout_marginRight="8dp"/>
+
+
+            <RadioButton
+                android:id="@+id/veryBad_radio_button_alert_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="بد"
+                android:textStyle="bold"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp"
+                android:layout_marginRight="8dp"/>
+
+
+            <RadioButton
+                android:id="@+id/bad_radio_button_alert_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="معمولی"
+                android:textStyle="bold"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp"
+                android:layout_marginRight="8dp"/>
+
+
+            <RadioButton
+                android:id="@+id/med_radio_button_alert_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="خوب"
+                android:textStyle="bold"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp"
+                android:layout_marginRight="8dp"/>
+
+
+            <RadioButton
+                android:id="@+id/good_radio_button_alert_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="عالی"
+                android:textStyle="bold"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp"
+                android:layout_marginRight="8dp"/>
+
+
+            <RadioButton
+                android:id="@+id/veryGood_radio_button_alert_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+
+    </RadioGroup>
+
+
+
+</LinearLayout>
