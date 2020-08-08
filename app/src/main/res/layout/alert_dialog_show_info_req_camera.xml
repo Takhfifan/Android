@@ -23,7 +23,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:tint="@android:color/white"
-            app:srcCompat="@drawable/ic_baseline_exit_to_app_24"
+            app:srcCompat="@drawable/ic_baseline_camera_alt_24"
             tools:ignore="VectorDrawableCompat" />
 
         <com.example.takhfif01.widget.fonts.MyTextView
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="خروج"
+            android:text="درخواست مجوز"
             android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/white"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="آیا میخواهید از حساب کاربری خود خارج شوید؟"
+            android:text="برای دسترسی به دوربین باید مجوز را تایید کنید"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@color/grey_60"
@@ -66,26 +66,26 @@
         android:gravity="center"
         android:orientation="horizontal">
         <com.example.takhfif01.widget.fonts.MyButton
-            android:id="@+id/bt_not_close_dialog_exit_from_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_rounded_blue"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="خیر"
-            android:textSize="16sp"
-            android:textColor="@android:color/white" />
-
-        <com.example.takhfif01.widget.fonts.MyButton
-            android:id="@+id/bt_close_dialog_exit_from_profile"
+            android:id="@+id/bt_cancel_alert_dialog_show_info_req_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_rounded_red"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="بله"
+            android:text="لغو"
             android:textSize="16sp"
             android:textColor="@android:color/white" />
+        <com.example.takhfif01.widget.fonts.MyButton
+            android:id="@+id/bt_agree_alert_dialog_show_info_req_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_rounded_blue"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="موافقم"
+            android:textSize="16sp"
+            android:textColor="@android:color/white" />
+
 
     </LinearLayout>
 

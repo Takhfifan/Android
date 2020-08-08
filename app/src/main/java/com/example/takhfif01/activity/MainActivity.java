@@ -1,20 +1,26 @@
 package com.example.takhfif01.activity;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.media.Image;
@@ -35,6 +41,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -74,7 +81,10 @@ public class MainActivity extends AppCompatActivity  {
 
     private SliderPreManger preManeger;
 
-    private CardView btn_goto_profile_main,gotoShowShop;
+    private CardView btn_goto_profile_main,gotoShowShop,goToAllShopList;
+
+    private ImageView btnSearchqr_main;
+    private final int CAMERA_REQUEST_CODE = 100;
 
 
 
@@ -116,6 +126,25 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        if (requestCode == CAMERA_REQUEST_CODE) {
+
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                Toast.makeText(this, "مجوز تایید شد شما میتوانید وارد شوید", Toast.LENGTH_SHORT).show();
+
+            } else {
+
+                Toast.makeText(this, "مجوز رد شد", Toast.LENGTH_SHORT).show();
+
+            }
+
+        }
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,20 +161,101 @@ public class MainActivity extends AppCompatActivity  {
         showMoreInfoInNav();
         goToProfile();
         goToShowShop();
+        goToListOfAllShopActivity();
+        goToCameraForSearch();
 
 
     }
 
-    private void goToShowShop() {
-        gotoShowShop.setOnClickListener(new View.OnClickListener() {
+    private void goToCameraForSearch() {
+        btnSearchqr_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ShowShopActivity.class);
-                startActivity(intent);
+                if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+
+                    requestCameraPermission();
+
+                } else {
+
+                    Toast.makeText(MainActivity.this, "مجوز قبلا دریافت شده", Toast.LENGTH_SHORT).show();
+
+                }
             }
         });
     }
 
+    private void requestCameraPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.CAMERA)) {
+
+            showCustomDialogForShowReqCamera();
+
+     /*       new AlertDialog.Builder(this)
+                    .setTitle("درخواست مجوز")
+                    .setMessage("برای دسترسی به دوربین باید مجوز را تایید کنید")
+                    .setPositiveButton("موافقم", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                            reqPermission();
+
+                        }
+                    })
+                    .setNegativeButton("لغو", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                            dialogInterface.dismiss();
+
+                        }
+                    })
+                    .create()
+                    .show();*/
+
+        } else {
+
+            reqPermission();
+
+        }
+    }
+
+    private void showCustomDialogForShowReqCamera() {
+
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
+        dialog.setContentView(R.layout.alert_dialog_show_info_req_camera);
+        dialog.setCancelable(true);
+        // dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.WRAP_CONTENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+
+
+        (dialog.findViewById(R.id.bt_cancel_alert_dialog_show_info_req_camera)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        (dialog.findViewById(R.id.bt_agree_alert_dialog_show_info_req_camera)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                reqPermission();
+                dialog.dismiss();
+
+            }
+        });
+
+        dialog.show();
+        dialog.getWindow().setAttributes(lp);
+    }
+
+    private void reqPermission() {
+        ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.CAMERA}, CAMERA_REQUEST_CODE);
+    }
 
     private void init() {
         btnMenu_main = findViewById(R.id.btnMenu_main);
@@ -162,9 +272,33 @@ public class MainActivity extends AppCompatActivity  {
         preManeger = new SliderPreManger(C.context);
         btn_goto_profile_main = findViewById(R.id.btn_goto_profile_main);
         gotoShowShop = findViewById(R.id.gotoShowShop);
+        goToAllShopList = findViewById(R.id.goToAllShopList);
+        btnSearchqr_main = findViewById(R.id.btnSearchqr_main);
 
 
     }
+
+    private void goToListOfAllShopActivity() {
+        goToAllShopList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ListOfAllShopActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void goToShowShop() {
+        gotoShowShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ShowShopActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
     private void goToProfile() {
         btn_goto_profile_main.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -446,12 +580,13 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-
-
-
     public static void displayImageFromUrl(Context ctx, ImageView img, String drawable) {
 
         CircularProgressDrawable circularProgressDrawable = new CircularProgressDrawable(ctx);
+
+
+
+
         circularProgressDrawable.setStrokeWidth(15f);
         circularProgressDrawable.setCenterRadius(75f);
         circularProgressDrawable.setColorFilter(ContextCompat.getColor(C.context, R.color.colorAccent), PorterDuff.Mode.SRC_IN);

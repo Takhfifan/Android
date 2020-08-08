@@ -39,8 +39,8 @@ public class MoreInfoShopActivity extends AppCompatActivity {
     }
 
     private void init() {
-        tl_tabLayout = findViewById(R.id.tl_tabLayout);
-        vp_viewPager = findViewById(R.id.vp_viewPager);
+        tl_tabLayout = findViewById(R.id.more_info_tabLayout);
+        vp_viewPager = findViewById(R.id.more_info_viewPager);
     }
 
 
