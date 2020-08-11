@@ -84,25 +84,26 @@
             -->
 
             <com.example.takhfif01.widget.fonts.MyTextView
+                android:id="@+id/txt_total_money_my_wallet"
                 android:layout_centerInParent="true"
                 android:textColor="@color/black"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2,000,000 تومان"/>
 
-            <ImageView
-                android:layout_margin="4dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:textColor="@color/green_400"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="افزایش اعتبار"
                 android:layout_centerInParent="true"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:tint="@color/colorPrimary"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_baseline_add_24" />
+                android:layout_alignParentBottom="true"/>
 
 
         </RelativeLayout>
