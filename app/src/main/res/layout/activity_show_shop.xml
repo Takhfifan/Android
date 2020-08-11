@@ -1,0 +1,2333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200"
+    android:orientation="vertical"
+    tools:context=".activity.ShowShopActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/btnBack_show_shop"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:src="@drawable/cancel_24" />
+
+                <ImageView
+                    android:id="@+id/bttnShare_show_show"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_baseline_share_24"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/bttnShare_show_show"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_baseline_favorite_border_24" />
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view_show_shop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/my_image_slider_show_shop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:layoutDirection="rtl"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="پیشنهاد ویژه"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="17sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center">
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="1dp"
+                                            android:text="12"
+                                            android:textColor="@color/grey_700"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="2dp"
+                                            android:layout_marginRight="2dp"
+                                            android:text=":"
+                                            android:textColor="@color/grey_700"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="1dp"
+                                            android:text="34"
+                                            android:textColor="@color/grey_700"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="2dp"
+                                            android:layout_marginRight="2dp"
+                                            android:text=":"
+                                            android:textColor="@color/grey_700"
+                                            android:textSize="16sp" />
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="1dp"
+                                            android:text="01"
+                                            android:textColor="@color/grey_700"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="فروشگاه ورزشی رزاقیان"
+                                android:textColor="#000"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="left|center"
+                                android:orientation="horizontal">
+
+
+                                <RatingBar
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:isIndicator="true"
+                                    android:numStars="5"
+                                    android:stepSize="0.1" />
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:text="(11)" />
+                            </LinearLayout>
+
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:maxLines="2"
+                                android:text="توضیح کوتاه توضیح کوتاه توضیح کوتاه توضیح کوتاه توضیح کوتاه توضیح کوتاه توضیح کوتاه توضیح کوتاه توضیح کوتاه توضیح کوتاهتوضیح کوتاه"
+                                android:textColor="@color/grey_60"
+                                android:textSize="14sp" />
+
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:id="@+id/linear_goto_more_description"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:selectableItemBackground"
+                                android:padding="8dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center|left">
+
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:tint="@color/grey_40"
+                                        android:src="@drawable/ic_baseline_arrow_back_ios_48"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:paddingRight="4dp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center|right">
+
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="بیشتر +"
+                                        android:textColor="@color/blue_A400"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--
+                            <RelativeLayout
+                                android:layout_margin="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:foreground="?android:attr/selectableItemBackground"
+                                        android:layout_gravity="center"
+                                        app:cardCornerRadius="65dp"
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp">
+                                        <RelativeLayout
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+                                            <ImageView
+                                                android:layout_centerInParent="true"
+                                                android:scaleType="centerCrop"
+                                                android:adjustViewBounds="true"
+                                                android:src="@drawable/map_icon2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"/>
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                    </androidx.cardview.widget.CardView>
+
+
+
+                            </RelativeLayout>
+
+                -->
+                <!--
+                         <RelativeLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:padding="8dp">
+
+                             <androidx.cardview.widget.CardView
+
+                                 android:clickable="true"
+                                 android:focusable="true"
+                                 android:foreground="?android:attr/selectableItemBackground"
+                                 android:id="@+id/card_img"
+                                 android:layout_width="120dp"
+                                 android:layout_height="120dp"
+                                 app:cardCornerRadius="65dp">
+
+                                 <ImageView
+                                     android:layout_centerInParent="true"
+                                     android:scaleType="centerCrop"
+                                     android:adjustViewBounds="true"
+                                     android:src="@drawable/map_icon2"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"/>
+                             </androidx.cardview.widget.CardView>
+
+                             <androidx.cardview.widget.CardView
+                                 android:layout_marginTop="4dp"
+                                 android:layout_marginLeft="-48dp"
+                                 android:layout_toRightOf="@+id/card_img"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="110dp"
+                                 app:cardCornerRadius="16dp"
+                                 app:cardElevation="-2dp"
+                                 >
+
+                                 <RelativeLayout
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:layout_marginLeft="56dp">
+
+
+
+
+                                 </RelativeLayout>
+                             </androidx.cardview.widget.CardView>
+
+
+
+                         </RelativeLayout>
+
+             -->
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewAddress_showShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutAddressName_showShop"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:gravity="center"
+                            android:padding="8dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left|center">
+<!--
+                                <ImageView
+                                    android:id="@+id/imageViewAddressArrow_showShop"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_baseline_arrow_drop_down_24_black" />-->
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="4dp"
+                                        android:text="آدرس"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_baseline_location_on_24" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutAddressDetail_showShop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_gravity="right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="شهرک رزاقیان،جنب بانک پاسارگاردُشهرک رزاقیان،جنب بانک پاسارگاردشهرک رزاقیان،جنب بانک پاسارگارد"
+                                android:textColor="@color/grey_60"
+                                android:textSize="16sp" />
+<!--
+                            <LinearLayout
+                                android:gravity="right|center"
+                                android:layout_gravity="right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="8dp">
+
+                                <ImageView
+                                    android:scaleType="centerCrop"
+                                    android:adjustViewBounds="true"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/map_icon2"/>
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="آدرس دقیق تر"
+                                    android:textColor="@color/blue_A400"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
+-->
+
+                            <LinearLayout
+                                android:layout_marginBottom="8dp"
+                                android:gravity="right|center"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/map_icon2"/>
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="مشاهده"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/blue_A400"
+                                    android:layout_marginRight="8dp"/>
+
+
+                            </LinearLayout>
+
+
+
+
+                            <View
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey_300"/>
+
+                            <!--
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/map03"/>-->
+
+
+                            <LinearLayout
+                                android:id="@+id/linearLayoutMoreInfoDetail_showShop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginBottom="4dp"
+                                    android:gravity="center|right"
+                                    android:orientation="horizontal">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="4dp"
+                                        android:text="شماره تماس"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_baseline_local_phone_24"
+                                        android:tint="@color/colorPrimary" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="098888888"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="اقای فروشنده"
+                                            android:textSize="16sp" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+
+<!--
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:gravity="center|right"
+                                    android:orientation="horizontal"
+                                    android:paddingRight="4dp">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="4dp"
+                                        android:text="ساعات کاری"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="20sp" />
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_baseline_access_time_24"
+                                        android:tint="@color/colorPrimary" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:gravity="right"
+                                    android:orientation="vertical"
+                                    android:paddingRight="32dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="right"
+                                        android:orientation="horizontal">
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="4dp"
+                                            android:text="از شنبه تا چهارشنبه"
+                                            android:textSize="15sp" />
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="روزهای کاری:"
+                                            android:textColor="@color/grey_700"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="right"
+                                        android:orientation="horizontal">
+
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="4dp"
+                                            android:text="2 صبح تا 4 بعدظهر"
+                                            android:textSize="15sp" />
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="ساعات کاری:"
+                                            android:textColor="@color/grey_700"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+-->
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:id="@+id/linear_goto_more_address"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:selectableItemBackground"
+                                android:padding="8dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center|left">
+
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:tint="@color/grey_40"
+                                        android:src="@drawable/ic_baseline_arrow_back_ios_48"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:paddingRight="4dp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center|right">
+
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="بیشتر +"
+                                        android:textColor="@color/blue_A400"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+<!--
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewMoreInfo_showShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutMoreInfoName_showShop"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left|center">
+
+                                <ImageView
+                                    android:id="@+id/imageViewMoreInfoArrow_showShop"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_baseline_arrow_drop_down_24_black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="4dp"
+                                        android:text="اطلاعات بیشتر"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_baseline_info_24_color_primary" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutMoreInfoDetail_showShop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="center|right"
+                                android:orientation="horizontal"
+                                android:paddingRight="16dp">
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:text="شماره تماس"
+                                    android:textColor="@color/grey_700"
+                                    android:textSize="20sp" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_baseline_local_phone_24"
+                                    android:tint="@color/colorPrimary" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="098888888"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="اقای فروشنده"
+                                        android:textSize="18sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="32dp"
+                                android:layout_marginRight="32dp"
+                                android:background="@color/grey_500" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="098888888"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="اقای فروشنده"
+                                        android:textSize="18sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="center|right"
+                                android:orientation="horizontal"
+                                android:paddingRight="16dp">
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:text="ساعات کاری"
+                                    android:textColor="@color/grey_700"
+                                    android:textSize="20sp" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_baseline_access_time_24"
+                                    android:tint="@color/colorPrimary" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="right"
+                                android:orientation="vertical"
+                                android:paddingRight="32dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:gravity="right"
+                                    android:orientation="horizontal">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="4dp"
+                                        android:text="از شنبه تا چهارشنبه"
+                                        android:textSize="16sp" />
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="روزهای کاری:"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:gravity="right"
+                                    android:orientation="horizontal">
+
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="4dp"
+                                        android:text="2 صبح تا 4 بعدظهر"
+                                        android:textSize="16sp" />
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="ساعات کاری:"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewReadfMore_showShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutReadfMoreDetail_showShop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayoutReadfMoreName_showShop">
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" تست تست تست تست تست تست تست تست تست تست تست تست تست تست  تست تست تست تست تست تست تست تست تست تست تست تست تست تست  تست تست تست تست تست تست تست تست تست تست تست تست تست تست  تست تست تست تست تست تست تست تست تست تست تست تست تست تست  تست تست تست تست تست تست تست تست تست تست تست تست تست تست " />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutReadfMoreName_showShop"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left|center">
+
+                                <ImageView
+                                    android:id="@+id/imageViewReadfMoreArrow_showShop"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_baseline_arrow_drop_down_24_black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="4dp"
+                                        android:text="اطلاعات بیشتر"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_baseline_info_24_color_primary" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                -->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.4"
+                                android:gravity="left|center">
+
+
+                                <com.example.takhfif01.widget.fonts.MyButton
+                                    android:id="@+id/btn_goto_comment_activity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:background="@drawable/selector_background_button_view_all"
+                                    android:text="مشاهده همه"
+                                    android:textColor="#FFF"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="right|center">
+
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8dp"
+                                    android:text="نظرات کاربران"
+                                    android:textColor="#292929"
+                                    android:textSize="19sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layoutDirection="rtl"
+                            android:paddingTop="8dp"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:paddingLeft="4dp"
+                                android:paddingRight="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="280dp"
+                                    android:layout_height="180dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="right"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="محصولات متنوع"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+
+                                        <RatingBar
+                                            style="?android:attr/ratingBarStyleSmall"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="4dp"
+                                            android:isIndicator="true"
+                                            android:numStars="5"
+                                            android:stepSize="0.1" />
+
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:maxEms="17"
+                                            android:maxLines="3"
+                                            android:text="محصولات متنوعی داره خودم خیلی راضی بودم پیشنهاد میکنم حتما یه سر بزنید کفشاشون خیلی با کیفیت بود 5 امتیاز هم کمه حتما تا تخفیف داره بهش سر بزنید" />
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="8dp"
+                                            android:orientation="horizontal">
+                                            <LinearLayout
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="right|bottom"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="7"
+                                                    android:maxLines="1"
+                                                    android:text=" تام هاردی" />
+
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:gravity="left"
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left|bottom"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="8"
+                                                    android:maxLines="1"
+                                                    android:text="2ماه پیش " />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="280dp"
+                                    android:layout_height="180dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="right"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="محصولات متنوع"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+
+                                        <RatingBar
+                                            style="?android:attr/ratingBarStyleSmall"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="4dp"
+                                            android:isIndicator="true"
+                                            android:numStars="5"
+                                            android:stepSize="0.1" />
+
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:maxEms="17"
+                                            android:maxLines="3"
+                                            android:text="محصولات متنوعی داره خودم خیلی راضی بودم پیشنهاد میکنم حتما یه سر بزنید کفشاشون خیلی با کیفیت بود 5 امتیاز هم کمه حتما تا تخفیف داره بهش سر بزنید" />
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="8dp"
+                                            android:orientation="horizontal">
+                                            <LinearLayout
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="right|bottom"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="7"
+                                                    android:maxLines="1"
+                                                    android:text=" تام هاردی" />
+
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:gravity="left"
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left|bottom"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="8"
+                                                    android:maxLines="1"
+                                                    android:text="2ماه پیش " />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="280dp"
+                                    android:layout_height="180dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="right"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="محصولات متنوع"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+
+                                        <RatingBar
+                                            style="?android:attr/ratingBarStyleSmall"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="4dp"
+                                            android:isIndicator="true"
+                                            android:numStars="5"
+                                            android:stepSize="0.1" />
+
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:maxEms="17"
+                                            android:maxLines="3"
+                                            android:text="محصولات متنوعی داره خودم خیلی راضی بودم پیشنهاد میکنم حتما یه سر بزنید کفشاشون خیلی با کیفیت بود 5 امتیاز هم کمه حتما تا تخفیف داره بهش سر بزنید" />
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="8dp"
+                                            android:orientation="horizontal">
+                                            <LinearLayout
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="right|bottom"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="7"
+                                                    android:maxLines="1"
+                                                    android:text=" تام هاردی" />
+
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:gravity="left"
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left|bottom"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="8"
+                                                    android:maxLines="1"
+                                                    android:text="2ماه پیش " />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="280dp"
+                                    android:layout_height="180dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="right"
+                                        android:orientation="vertical"
+                                        android:padding="8dp">
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="محصولات متنوع"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+
+                                        <RatingBar
+                                            style="?android:attr/ratingBarStyleSmall"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="4dp"
+                                            android:isIndicator="true"
+                                            android:numStars="5"
+                                            android:stepSize="0.1" />
+
+
+                                        <com.example.takhfif01.widget.fonts.MyTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:maxEms="17"
+                                            android:maxLines="3"
+                                            android:text="محصولات متنوعی داره خودم خیلی راضی بودم پیشنهاد میکنم حتما یه سر بزنید کفشاشون خیلی با کیفیت بود 5 امتیاز هم کمه حتما تا تخفیف داره بهش سر بزنید" />
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="8dp"
+                                            android:orientation="horizontal">
+                                            <LinearLayout
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="right|bottom"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="7"
+                                                    android:maxLines="1"
+                                                    android:text=" تام هاردی" />
+
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:gravity="left"
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left|bottom"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="8"
+                                                    android:maxLines="1"
+                                                    android:text="2ماه پیش " />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="8dp"
+                            android:padding="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/grey_300"/>
+
+                                <LinearLayout
+                                    android:paddingBottom="16dp"
+                                    android:paddingTop="16dp"
+                                    android:gravity="right|center"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="بیش از 30 نفر اینجارو پیشنهاد کردند!"
+                                        android:textSize="17sp" />
+                                    <ImageView
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:tint="@color/green_600"
+                                        android:src="@drawable/ic_baseline_loyalty_24_color_primary"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/grey_300"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:selectableItemBackground"
+                                android:padding="8dp"
+                                android:layout_marginTop="8dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center|left">
+
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:tint="@color/grey_40"
+                                        android:src="@drawable/ic_baseline_arrow_back_ios_48"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center|right">
+
+
+                                    <com.example.takhfif01.widget.fonts.MyTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="گزارش"
+                                        android:textColor="@color/red_700"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.4"
+                                android:gravity="left|center">
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="right|center">
+
+
+                                <com.example.takhfif01.widget.fonts.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8dp"
+                                    android:text="پیشنهادات مشابه"
+                                    android:textColor="#292929"
+                                    android:textSize="19sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layoutDirection="rtl"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="16dp"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:paddingRight="4dp"
+                                android:paddingLeft="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="190dp"
+                                    android:layout_height="310dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.6"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:adjustViewBounds="true"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/rest" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.4"
+                                            android:orientation="vertical"
+                                            android:paddingLeft="4dp"
+                                            android:paddingTop="8dp"
+                                            android:paddingRight="4dp">
+
+                                            <com.example.takhfif01.widget.fonts.MyTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center|right"
+                                                android:layout_marginBottom="8dp"
+                                                android:ellipsize="end"
+                                                android:maxEms="8"
+                                                android:maxLines="1"
+                                                android:text="رستوران رزاقیان"
+                                                android:textColor="@color/overlay_dark_90"
+                                                android:textSize="17sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center|right"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="16dp"
+                                                    android:layout_height="16dp"
+                                                    android:src="@drawable/ic_baseline_location_on_24" />
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="9"
+                                                    android:maxLines="1"
+                                                    android:text="چهاراه امام ،روبرو صادرات"
+                                                    android:textColor="@color/grey_60"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1"
+                                                    android:padding="4dp">
+
+                                                    <com.example.takhfif01.widget.fonts.MyTextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:background="@drawable/linear_off_border_main"
+                                                        android:padding="4dp"
+                                                        android:text="%75"
+                                                        android:textSize="15sp" />
+
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" />
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="190dp"
+                                    android:layout_height="310dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.6"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:adjustViewBounds="true"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/rest" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.4"
+                                            android:orientation="vertical"
+                                            android:paddingLeft="4dp"
+                                            android:paddingTop="8dp"
+                                            android:paddingRight="4dp">
+
+                                            <com.example.takhfif01.widget.fonts.MyTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center|right"
+                                                android:layout_marginBottom="8dp"
+                                                android:ellipsize="end"
+                                                android:maxEms="8"
+                                                android:maxLines="1"
+                                                android:text="رستوران رزاقیان"
+                                                android:textColor="@color/overlay_dark_90"
+                                                android:textSize="17sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center|right"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="16dp"
+                                                    android:layout_height="16dp"
+                                                    android:src="@drawable/ic_baseline_location_on_24" />
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="9"
+                                                    android:maxLines="1"
+                                                    android:text="چهاراه امام ،روبرو صادرات"
+                                                    android:textColor="@color/grey_60"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1"
+                                                    android:padding="4dp">
+
+                                                    <com.example.takhfif01.widget.fonts.MyTextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:background="@drawable/linear_off_border_main"
+                                                        android:padding="4dp"
+                                                        android:text="%75"
+                                                        android:textSize="15sp" />
+
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" />
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="190dp"
+                                    android:layout_height="310dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.6"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:adjustViewBounds="true"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/rest" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.4"
+                                            android:orientation="vertical"
+                                            android:paddingLeft="4dp"
+                                            android:paddingTop="8dp"
+                                            android:paddingRight="4dp">
+
+                                            <com.example.takhfif01.widget.fonts.MyTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center|right"
+                                                android:layout_marginBottom="8dp"
+                                                android:ellipsize="end"
+                                                android:maxEms="8"
+                                                android:maxLines="1"
+                                                android:text="رستوران رزاقیان"
+                                                android:textColor="@color/overlay_dark_90"
+                                                android:textSize="17sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center|right"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="16dp"
+                                                    android:layout_height="16dp"
+                                                    android:src="@drawable/ic_baseline_location_on_24" />
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="9"
+                                                    android:maxLines="1"
+                                                    android:text="چهاراه امام ،روبرو صادرات"
+                                                    android:textColor="@color/grey_60"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1"
+                                                    android:padding="4dp">
+
+                                                    <com.example.takhfif01.widget.fonts.MyTextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:background="@drawable/linear_off_border_main"
+                                                        android:padding="4dp"
+                                                        android:text="%75"
+                                                        android:textSize="15sp" />
+
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" />
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="190dp"
+                                    android:layout_height="310dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.6"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:adjustViewBounds="true"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/rest" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.4"
+                                            android:orientation="vertical"
+                                            android:paddingLeft="4dp"
+                                            android:paddingTop="8dp"
+                                            android:paddingRight="4dp">
+
+                                            <com.example.takhfif01.widget.fonts.MyTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center|right"
+                                                android:layout_marginBottom="8dp"
+                                                android:ellipsize="end"
+                                                android:maxEms="8"
+                                                android:maxLines="1"
+                                                android:text="رستوران رزاقیان"
+                                                android:textColor="@color/overlay_dark_90"
+                                                android:textSize="17sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center|right"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="16dp"
+                                                    android:layout_height="16dp"
+                                                    android:src="@drawable/ic_baseline_location_on_24" />
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="9"
+                                                    android:maxLines="1"
+                                                    android:text="چهاراه امام ،روبرو صادرات"
+                                                    android:textColor="@color/grey_60"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1"
+                                                    android:padding="4dp">
+
+                                                    <com.example.takhfif01.widget.fonts.MyTextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:background="@drawable/linear_off_border_main"
+                                                        android:padding="4dp"
+                                                        android:text="%75"
+                                                        android:textSize="15sp" />
+
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" />
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="190dp"
+                                    android:layout_height="310dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp"
+                                    app:cardCornerRadius="6dp"
+                                    app:cardElevation="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.6"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:adjustViewBounds="true"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/rest" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.4"
+                                            android:orientation="vertical"
+                                            android:paddingLeft="4dp"
+                                            android:paddingTop="8dp"
+                                            android:paddingRight="4dp">
+
+                                            <com.example.takhfif01.widget.fonts.MyTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center|right"
+                                                android:layout_marginBottom="8dp"
+                                                android:ellipsize="end"
+                                                android:maxEms="8"
+                                                android:maxLines="1"
+                                                android:text="رستوران رزاقیان"
+                                                android:textColor="@color/overlay_dark_90"
+                                                android:textSize="17sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center|right"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="16dp"
+                                                    android:layout_height="16dp"
+                                                    android:src="@drawable/ic_baseline_location_on_24" />
+
+                                                <com.example.takhfif01.widget.fonts.MyTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:ellipsize="end"
+                                                    android:maxEms="9"
+                                                    android:maxLines="1"
+                                                    android:text="چهاراه امام ،روبرو صادرات"
+                                                    android:textColor="@color/grey_60"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1"
+                                                    android:padding="4dp">
+
+                                                    <com.example.takhfif01.widget.fonts.MyTextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom"
+                                                        android:background="@drawable/linear_off_border_main"
+                                                        android:padding="4dp"
+                                                        android:text="%75"
+                                                        android:textSize="15sp" />
+
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" />
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+<!--
+        <LinearLayout
+            android:id="@+id/linearAddBasket"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/linear_buy_border_show_shop"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <com.example.takhfif01.widget.fonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="تخفیف"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+
+                <com.example.takhfif01.widget.fonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="35%"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+-->
+
+
+
+</LinearLayout>

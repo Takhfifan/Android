@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private SliderPreManger preManeger;
 
-    private CardView btn_goto_profile_main,gotoShowShop,goToAllShopList;
+    private CardView btn_goto_profile_main,gotoShowShop,goToAllShopList,goToMyWallet;
 
     private ImageView btnSearchqr_main;
     private final int CAMERA_REQUEST_CODE = 100;
@@ -163,8 +163,42 @@ public class MainActivity extends AppCompatActivity  {
         goToShowShop();
         goToListOfAllShopActivity();
         goToCameraForSearch();
+        gtoMyWalletActivity();
 
 
+    }
+
+
+    private void init() {
+        btnMenu_main = findViewById(R.id.btnMenu_main);
+        drawerLayout = findViewById(R.id.drawer_main);
+        BuyMenuListView_nav = findViewById(R.id.BuyMenuListView_nav);
+        linearInfo_main = findViewById(R.id.linearInfo_main);
+        linearMoreInfo_main = findViewById(R.id.linearMoreInfo_main);
+        imgArrowInfo_nav = findViewById(R.id.imgArrowInfo_nav);
+        imgArrowInfo_nav.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_48);
+        productListView_nav = findViewById(R.id.productListView_nav);
+        settingListView = findViewById(R.id.settingListView);
+        txtUserName_nav = findViewById(R.id.txtUserName_nav);
+        txtexit_nav = findViewById(R.id.txtexit_nav);
+        preManeger = new SliderPreManger(C.context);
+        btn_goto_profile_main = findViewById(R.id.btn_goto_profile_main);
+        gotoShowShop = findViewById(R.id.gotoShowShop);
+        goToAllShopList = findViewById(R.id.goToAllShopList);
+        btnSearchqr_main = findViewById(R.id.btnSearchqr_main);
+        goToMyWallet = findViewById(R.id.goToMyWallet);
+
+
+    }
+
+    private void gtoMyWalletActivity() {
+        goToMyWallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MyWalletActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void goToCameraForSearch() {
@@ -256,28 +290,6 @@ public class MainActivity extends AppCompatActivity  {
     private void reqPermission() {
         ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.CAMERA}, CAMERA_REQUEST_CODE);
     }
-
-    private void init() {
-        btnMenu_main = findViewById(R.id.btnMenu_main);
-        drawerLayout = findViewById(R.id.drawer_main);
-        BuyMenuListView_nav = findViewById(R.id.BuyMenuListView_nav);
-        linearInfo_main = findViewById(R.id.linearInfo_main);
-        linearMoreInfo_main = findViewById(R.id.linearMoreInfo_main);
-        imgArrowInfo_nav = findViewById(R.id.imgArrowInfo_nav);
-        imgArrowInfo_nav.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_48);
-        productListView_nav = findViewById(R.id.productListView_nav);
-        settingListView = findViewById(R.id.settingListView);
-        txtUserName_nav = findViewById(R.id.txtUserName_nav);
-        txtexit_nav = findViewById(R.id.txtexit_nav);
-        preManeger = new SliderPreManger(C.context);
-        btn_goto_profile_main = findViewById(R.id.btn_goto_profile_main);
-        gotoShowShop = findViewById(R.id.gotoShowShop);
-        goToAllShopList = findViewById(R.id.goToAllShopList);
-        btnSearchqr_main = findViewById(R.id.btnSearchqr_main);
-
-
-    }
-
     private void goToListOfAllShopActivity() {
         goToAllShopList.setOnClickListener(new View.OnClickListener() {
             @Override
