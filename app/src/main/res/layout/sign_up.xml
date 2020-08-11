@@ -72,12 +72,13 @@
                             android:text="نام"
                             android:textColor="@color/grey_60"
                             android:textSize="16sp" />
-
+<!--
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/name_layout_signup"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
-
+                        </com.google.android.material.textfield.TextInputLayout>
+-->
                             <com.example.takhfif01.widget.fonts.MyEditText
                                 android:id="@+id/name_signup"
                                 android:layout_width="match_parent"
@@ -91,22 +92,32 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:theme="@style/EditText.Grey" />
-                        </com.google.android.material.textfield.TextInputLayout>
 
+                        <com.example.takhfif01.widget.fonts.MyTextView
+                            android:id="@+id/error_name_signup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red_400"
+                            android:textSize="12sp"
+                            android:text="نام باید حداقل 3 حرف باشد!"
+                            android:visibility="invisible"
+                            />
 
 
                         <com.example.takhfif01.widget.fonts.MyTextView
+                            android:layout_marginTop="12dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="نام خانوادگی"
                             android:textColor="@color/grey_60"
                             android:textSize="16sp" />
-
+<!--
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/lastname_layout_signup"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
-
+                        </com.google.android.material.textfield.TextInputLayout>
+-->
                             <com.example.takhfif01.widget.fonts.MyEditText
                                 android:id="@+id/lastname_signup"
                                 android:layout_width="match_parent"
@@ -120,11 +131,20 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:theme="@style/EditText.Grey" />
-                        </com.google.android.material.textfield.TextInputLayout>
 
+                        <com.example.takhfif01.widget.fonts.MyTextView
+                            android:id="@+id/error_lastname_signup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red_400"
+                            android:textSize="12sp"
+                            android:text="نام خانوادگی باید حداقل 4 حرف باشد!"
+                            android:visibility="invisible"
+                            />
 
 
                         <com.example.takhfif01.widget.fonts.MyTextView
+                            android:layout_marginTop="12dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="شماره موبایل"
@@ -132,11 +152,14 @@
                             android:textSize="16sp" />
 
 
+<!--
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/number_layout_signup"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
+                        </com.google.android.material.textfield.TextInputLayout>
 
+                        -->
                             <com.example.takhfif01.widget.fonts.MyEditText
                                 android:id="@+id/number_signup"
                                 android:layout_width="match_parent"
@@ -148,11 +171,21 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:theme="@style/EditText.Grey" />
-                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.example.takhfif01.widget.fonts.MyTextView
+                            android:id="@+id/error_number_signup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red_400"
+                            android:textSize="12sp"
+                            android:text="شماره ی خود را درست وارد کنید\nمثلا:09123456789"
+                            android:visibility="invisible"
+                            />
 
                         <View
                             android:layout_width="0dp"
-                            android:layout_height="20dp" />
+                            android:layout_height="10dp" />
 
                         <com.example.takhfif01.widget.fonts.MyButton
                             android:id="@+id/btn_login_getKey"

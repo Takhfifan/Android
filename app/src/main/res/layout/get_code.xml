@@ -136,6 +136,7 @@
                 app:cardElevation="6dp">
 
                 <LinearLayout
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -155,13 +156,16 @@
 
 
 
-
+<!--
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/number_layout_getcode"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
 
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    -->
                         <com.example.takhfif01.widget.fonts.MyEditText
                             android:id="@+id/number_getcode"
                             android:layout_width="match_parent"
@@ -181,81 +185,18 @@
                             android:layout_marginTop="18dp"
                             android:layout_marginBottom="18dp" />
 
-                        <!--
-                                            <LinearLayout
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginLeft="15dp"
-                                                android:layout_marginTop="18dp"
-                                                android:layout_marginRight="15dp"
-                                                android:layout_marginBottom="18dp"
-                                                android:layoutDirection="ltr"
-                                                android:orientation="horizontal">
-
-                                            <com.example.takhfif01.widget.fonts.MyEditText
-                                                android:id="@+id/number1_getcode"
-                                                android:layout_width="0dp"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:gravity="center"
-                                                android:inputType="number"
-                                                android:maxLength="1"
-                                                android:maxLines="1"
-                                                android:singleLine="true"
-                                                android:textColor="@color/grey_90"
-                                                android:textStyle="bold"
-                                                android:theme="@style/EditText.Grey" />
 
 
-                                            <com.example.takhfif01.widget.fonts.MyEditText
-                                                android:id="@+id/number2_getcode"
-                                                android:layout_width="0dp"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:gravity="center"
-                                                android:inputType="number"
-                                                android:maxLength="1"
-                                                android:maxLines="1"
-                                                android:singleLine="true"
-                                                android:textColor="@color/grey_90"
-                                                android:textStyle="bold"
-                                                android:theme="@style/EditText.Grey" />
-
-
-                                            <com.example.takhfif01.widget.fonts.MyEditText
-                                                android:id="@+id/number3_getcode"
-                                                android:layout_width="0dp"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:gravity="center"
-                                                android:inputType="number"
-                                                android:maxLength="1"
-                                                android:maxLines="1"
-                                                android:singleLine="true"
-                                                android:textColor="@color/grey_90"
-                                                android:textStyle="bold"
-                                                android:theme="@style/EditText.Grey" />
-
-
-                                            <com.example.takhfif01.widget.fonts.MyEditText
-                                                android:id="@+id/number4_getcode"
-                                                android:layout_width="0dp"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:gravity="center"
-                                                android:inputType="number"
-                                                android:maxLength="1"
-                                                android:maxLines="1"
-                                                android:singleLine="true"
-                                                android:textColor="@color/grey_90"
-                                                android:textStyle="bold"
-                                                android:theme="@style/EditText.Grey" />
-
-                                            </LinearLayout>
-                                    -->
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
+                    <com.example.takhfif01.widget.fonts.MyTextView
+                        android:id="@+id/error_number_getcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red_400"
+                        android:textSize="12sp"
+                        android:text="کد ارسال شده رقمی را درست وارد کنید!"
+                        android:visibility="invisible"
+                        android:layout_marginBottom="4dp"
+                        />
 
 
 

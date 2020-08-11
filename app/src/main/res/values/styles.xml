@@ -39,6 +39,12 @@
         <item name="colorControlNormal">@color/grey_700</item>
     </style>
 
+    <style name="EditText.Red" parent="@style/AppTheme">
+        <item name="colorControlActivated">@color/red_500</item>
+        <item name="colorControlHighlight">@color/red_500</item>
+        <item name="colorControlNormal">@color/red_400</item>
+    </style>
+
     <style name="EditText.White.Hint" parent="@style/EditText.White">
         <item name="colorAccent">@color/grey_600</item>
         <item name="android:textColorHint">@color/grey_600</item>
