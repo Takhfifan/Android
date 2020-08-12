@@ -34,10 +34,6 @@
         android:textColor="@color/grey_60"
         android:textSize="16sp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name_layout_change_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <com.example.takhfif01.widget.fonts.MyEditText
             android:focusedByDefault="false"
@@ -53,11 +49,36 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:theme="@style/EditText.Grey" />
-    </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/error_name_change_profile"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_400"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:text="توجه !  "
+                />
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_400"
+                android:textSize="12sp"
+                android:text="نام باید حداقل 3 حرف باشد!"
+                />
+
+        </LinearLayout>
 
 
 
-    <com.example.takhfif01.widget.fonts.MyTextView
+
+        <com.example.takhfif01.widget.fonts.MyTextView
         android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,10 +86,6 @@
         android:textColor="@color/grey_60"
         android:textSize="16sp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lastname_layout_change_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <com.example.takhfif01.widget.fonts.MyEditText
             android:focusedByDefault="false"
@@ -84,7 +101,35 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:theme="@style/EditText.Grey" />
-    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/error_lastname_change_profile"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_400"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:text="توجه !  "
+                />
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_400"
+                android:textSize="12sp"
+                android:text="نام خانوادگی باید حداقل 4 حرف باشد!"
+                />
+
+        </LinearLayout>
+
+
 
 </LinearLayout>
 

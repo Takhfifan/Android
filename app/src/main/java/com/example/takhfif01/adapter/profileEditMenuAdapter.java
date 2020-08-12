@@ -91,7 +91,7 @@ public class profileEditMenuAdapter extends ArrayAdapter {
         Log.i("TAG", "showBottomSheetDialogAddAccCard: accNumber="+accNumber);
 
         final EditText acc_card_add_profile = parent.findViewById(R.id.acc_card_add_profile);
-        final TextInputLayout acc_card_layout_add_profile = parent.findViewById(R.id.acc_card_layout_add_profile);
+        //final TextInputLayout acc_card_layout_add_profile = parent.findViewById(R.id.acc_card_layout_add_profile);
 
         acc_card_add_profile.setText(accNumber);
 
@@ -107,8 +107,8 @@ public class profileEditMenuAdapter extends ArrayAdapter {
 
 
                 if (!(acc_card_add_profile.getText().toString().trim().length() >= 16)) {
-                    acc_card_layout_add_profile.setErrorEnabled(true);
-                    acc_card_layout_add_profile.setError("نام باید 16 رقم باشد");
+                    //acc_card_layout_add_profile.setErrorEnabled(true);
+                    //acc_card_layout_add_profile.setError("نام باید 16 رقم باشد");
 
 
                 }else {
@@ -181,7 +181,7 @@ public class profileEditMenuAdapter extends ArrayAdapter {
         Log.i("TAG", "showBottomSheetDialogAddEmail: email="+email);
 
         final EditText email_add_profile = parent.findViewById(R.id.email_add_profile);
-        final TextInputLayout email_layout_add_profile = parent.findViewById(R.id.email_layout_add_profile);
+        //final TextInputLayout email_layout_add_profile = parent.findViewById(R.id.email_layout_add_profile);
 
         email_add_profile.setText(email);
 
@@ -202,8 +202,8 @@ public class profileEditMenuAdapter extends ArrayAdapter {
                         || txt_email_add_profile.split("@").length > 2){
 
 
-                    email_layout_add_profile.setErrorEnabled(true);
-                    email_layout_add_profile.setError("پست الکترونیک خود را درست وارد کنید!\nمثلا:myEmail@Info.com");
+                    //email_layout_add_profile.setErrorEnabled(true);
+                   // email_layout_add_profile.setError("پست الکترونیک خود را درست وارد کنید!\nمثلا:myEmail@Info.com");
                 }else {
                     SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(context);
                     SharedPreferences.Editor editor = preferences2.edit();
@@ -247,8 +247,8 @@ public class profileEditMenuAdapter extends ArrayAdapter {
         final EditText name_change_profile = parent.findViewById(R.id.name_change_profile);
         final EditText lastname_change_profile = parent.findViewById(R.id.lastname_change_profile);
 
-        final TextInputLayout name_layout_change_profile = parent.findViewById(R.id.name_layout_change_profile);
-        final TextInputLayout lastname_layout_change_profile = parent.findViewById(R.id.lastname_layout_change_profile);
+        //final TextInputLayout name_layout_change_profile = parent.findViewById(R.id.name_layout_change_profile);
+       // final TextInputLayout lastname_layout_change_profile = parent.findViewById(R.id.lastname_layout_change_profile);
 
 
         name_change_profile.setText(name);
@@ -268,13 +268,13 @@ public class profileEditMenuAdapter extends ArrayAdapter {
                         "\n"+"txt_username_change_profile"+txt_username_change_profile);
 
                 if (!(name_change_profile.getText().toString().trim().length() >= 3)) {
-                    name_layout_change_profile.setErrorEnabled(true);
-                    name_layout_change_profile.setError("نام باید حداقل 3 حرف باشد");
+             //       name_layout_change_profile.setErrorEnabled(true);
+             //       name_layout_change_profile.setError("نام باید حداقل 3 حرف باشد");
                 } else {
 
                     if (!(lastname_change_profile.getText().toString().trim().length() >= 4)) {
-                        lastname_layout_change_profile.setErrorEnabled(true);
-                        lastname_layout_change_profile.setError("نام خانوادگی باید حداقل 4 حرف باشد");
+                  //      lastname_layout_change_profile.setErrorEnabled(true);
+                 //       lastname_layout_change_profile.setError("نام خانوادگی باید حداقل 4 حرف باشد");
                     } else {
                         SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(context);
                         SharedPreferences.Editor editor = preferences2.edit();

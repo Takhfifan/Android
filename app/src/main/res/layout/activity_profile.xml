@@ -150,7 +150,7 @@
 
 
             </androidx.cardview.widget.CardView>
-
+<!--
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="335dp"
@@ -165,6 +165,343 @@
                     android:layoutDirection="rtl" />
 
             </androidx.cardview.widget.CardView>
+            -->
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:id="@+id/linearProfileEditName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1">
+
+                        <ImageView
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="left"
+                            android:src="@drawable/ic_baseline_arrow_back_ios_48"
+                            android:tint="@color/grey_500" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="0.9">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:text="نام و نام خانوادگی"
+                                android:textSize="15sp" />
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:id="@+id/txtDescProfileEditName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="4dp"
+                                android:textSize="13sp"
+                                android:textColor="#000"/>
+
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right|center"
+                            android:layout_marginRight="14dp"
+                            android:src="@drawable/ic_baseline_person_24_primary_color"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                    <View
+                        android:layout_marginRight="50dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_300"/>
+
+
+
+                <LinearLayout
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:id="@+id/linearProfileEditPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1">
+
+                        <ImageView
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="left"
+                            android:src="@drawable/ic_baseline_arrow_back_ios_48"
+                            android:tint="@color/grey_500" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="0.9">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:text="شماره تلفن همراه"
+                                android:textSize="15sp" />
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:id="@+id/txtDescProfileEditPhoneNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="4dp"
+                                android:textSize="13sp"
+                                android:textColor="#000"/>
+
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right|center"
+                            android:layout_marginRight="14dp"
+                            android:src="@drawable/ic_mobile_baseline_stay_primary_portrait_24_color_primary"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                    <View
+                        android:layout_marginRight="50dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_300"/>
+
+
+
+
+                <LinearLayout
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:id="@+id/linearProfileEditEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1">
+
+                        <ImageView
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="left"
+                            android:src="@drawable/ic_baseline_arrow_back_ios_48"
+                            android:tint="@color/grey_500" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="0.9">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:text="پست الکترونیک"
+                                android:textSize="15sp" />
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:id="@+id/txtDescProfileEditEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="4dp"
+                                android:textSize="13sp"
+                                android:textColor="#000"/>
+
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right|center"
+                            android:layout_marginRight="14dp"
+                            android:src="@drawable/ic_baseline_alternate_email_24_color_primary"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                    <View
+                        android:layout_marginRight="50dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_300"/>
+
+
+
+
+
+                <LinearLayout
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:id="@+id/linearProfileCreditCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1">
+
+                        <ImageView
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="left"
+                            android:src="@drawable/ic_baseline_arrow_back_ios_48"
+                            android:tint="@color/grey_500" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="0.9">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:text="شماره کارت جهت بازگردانی وجه نقد"
+                                android:textSize="15sp" />
+
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:id="@+id/txtDescProfileEditCreditCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="4dp"
+                                android:textSize="13sp"
+                                android:textColor="#000"/>
+
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right|center"
+                            android:layout_marginRight="14dp"
+                            android:src="@drawable/ic_baseline_credit_card_24_color_primary"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -189,7 +526,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="185dp"
+                android:layout_height="175dp"
                 android:layout_marginBottom="8dp"
                 android:background="#FFF">
 

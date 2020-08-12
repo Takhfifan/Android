@@ -221,13 +221,14 @@
                                 android:textSize="14sp" />
 
 
+                        </LinearLayout>
                             <LinearLayout
                                 android:gravity="center"
                                 android:id="@+id/linear_goto_more_description"
                                 android:clickable="true"
                                 android:focusable="true"
                                 android:foreground="?android:selectableItemBackground"
-                                android:padding="8dp"
+                                android:padding="12dp"
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
@@ -270,7 +271,6 @@
 
 
 
-                        </LinearLayout>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -682,13 +682,15 @@
                             </LinearLayout>
 
 
+                        </LinearLayout>
+
                             <LinearLayout
                                 android:gravity="center"
                                 android:id="@+id/linear_goto_more_address"
                                 android:clickable="true"
                                 android:focusable="true"
                                 android:foreground="?android:selectableItemBackground"
-                                android:padding="8dp"
+                                android:padding="12dp"
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
@@ -730,8 +732,6 @@
                             </LinearLayout>
 
 
-
-                        </LinearLayout>
 
 
                     </LinearLayout>

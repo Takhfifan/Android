@@ -93,16 +93,31 @@
                                 android:textStyle="bold"
                                 android:theme="@style/EditText.Grey" />
 
-                        <com.example.takhfif01.widget.fonts.MyTextView
+
+                        <LinearLayout
                             android:id="@+id/error_name_signup"
+                            android:orientation="horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/red_400"
-                            android:textSize="12sp"
-                            android:text="نام باید حداقل 3 حرف باشد!"
-                            android:visibility="invisible"
-                            />
+                            android:visibility="invisible">
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/red_400"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:text="توجه !  "
+                                />
 
+                            <com.example.takhfif01.widget.fonts.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/red_400"
+                                android:textSize="12sp"
+                                android:text="نام باید حداقل 3 حرف باشد!"
+                                />
+
+                        </LinearLayout>
 
                         <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_marginTop="12dp"
@@ -132,16 +147,32 @@
                                 android:textStyle="bold"
                                 android:theme="@style/EditText.Grey" />
 
+
+
+                    <LinearLayout
+                        android:id="@+id/error_lastname_signup"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible">
+
                         <com.example.takhfif01.widget.fonts.MyTextView
-                            android:id="@+id/error_lastname_signup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red_400"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:text="توجه !  "
+                            />
+                        <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/red_400"
                             android:textSize="12sp"
                             android:text="نام خانوادگی باید حداقل 4 حرف باشد!"
-                            android:visibility="invisible"
                             />
 
+                    </LinearLayout>
 
                         <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_marginTop="12dp"
@@ -173,17 +204,33 @@
                                 android:theme="@style/EditText.Grey" />
 
 
+
+                    <LinearLayout
+                        android:id="@+id/error_number_signup"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible">
+
                         <com.example.takhfif01.widget.fonts.MyTextView
-                            android:id="@+id/error_number_signup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red_400"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:text="توجه !  "
+                            />
+                        <com.example.takhfif01.widget.fonts.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/red_400"
                             android:textSize="12sp"
-                            android:text="شماره ی خود را درست وارد کنید\nمثلا:09123456789"
-                            android:visibility="invisible"
+                            android:text="شماره ی خود را درست وارد کنید\nمثلا: 09123456789"
                             />
+                    </LinearLayout>
 
-                        <View
+
+                <View
                             android:layout_width="0dp"
                             android:layout_height="10dp" />
 

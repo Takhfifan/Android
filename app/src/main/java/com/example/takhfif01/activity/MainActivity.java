@@ -434,8 +434,8 @@ public class MainActivity extends AppCompatActivity  {
 
 
         settingItems = new ArrayList<>();
-        settingItems.add(new settingMenuListItem("تنظیمات"));
         settingItems.add(new settingMenuListItem("سوالات متداول"));
+        settingItems.add(new settingMenuListItem("گزازش خطا"));
         settingItems.add(new settingMenuListItem("درباره ما"));
         settingListView.setAdapter(new settingMenuAdapter(MainActivity.this, R.layout.menu_list_setting, settingItems));
 

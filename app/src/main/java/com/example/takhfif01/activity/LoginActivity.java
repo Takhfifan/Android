@@ -3,10 +3,15 @@ package com.example.takhfif01.activity;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +19,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -37,7 +43,8 @@ public class LoginActivity extends AppCompatActivity {
     SliderPreManger preManeger;
 
 
-    TextView error_name_signup,error_lastname_signup,error_number_signup,error_number_getcode;
+    LinearLayout error_name_signup, error_lastname_signup, error_number_signup;
+    TextView error_number_getcode;
 
     public static SharedPreferences preferences;
 
@@ -76,7 +83,6 @@ public class LoginActivity extends AppCompatActivity {
         error_number_signup = findViewById(R.id.error_number_signup);
         error_number_getcode = findViewById(R.id.error_number_getcode);
     }
-
 
 
     private void backToGetKeyNumber() {
@@ -124,16 +130,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private boolean checkCode() {
-        if (number_getcode.getText().toString().trim().isEmpty() || number_getcode.getText().toString().trim().length() < 4) {
-            //number_layout_getcode.setErrorEnabled(true);
-            //number_layout_getcode.setError("لطفا کد 4رقمی را درست وارد کنید!");
-            error_number_getcode.setVisibility(View.VISIBLE);
-            return false;
-        }
-        return true;
-    }
-
     private void getKeyNumber() {
         btn_login_getKey.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,13 +151,49 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    private boolean checkCode() {
+        if (number_getcode.getText().toString().trim().isEmpty() || number_getcode.getText().toString().trim().length() < 4) {
+            //number_layout_getcode.setErrorEnabled(true);
+            //number_layout_getcode.setError("لطفا کد 4رقمی را درست وارد کنید!");
+
+            error_number_getcode.setVisibility(View.VISIBLE);
+
+
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            // Vibrate for 500 milliseconds
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                v.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                //deprecated in API 26
+                v.vibrate(200);
+            }
+
+
+            return false;
+        }
+        return true;
+    }
+
     private boolean checkFieldNumber() {
         if (!number_signup.getText().toString().startsWith("09") ||
 
                 number_signup.getText().toString().length() != 11) {
             //number_layout_signup.setErrorEnabled(true);
             //number_layout_signup.setError("شماره ی خود را درست وارد کنید\nمثلا:091234567891");
+
             error_number_signup.setVisibility(View.VISIBLE);
+
+
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            // Vibrate for 500 milliseconds
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                v.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                //deprecated in API 26
+                v.vibrate(200);
+            }
+
+
             return false;
         }
         return true;
@@ -171,7 +203,19 @@ public class LoginActivity extends AppCompatActivity {
         if (!(lastname_signup.getText().toString().trim().length() >= 4)) {
             //lastname_layout_signup.setErrorEnabled(true);
             //lastname_layout_signup.setError("نام خانوادگی باید حداقل 4 حرف باشد");
+
+
             error_lastname_signup.setVisibility(View.VISIBLE);
+
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            // Vibrate for 500 milliseconds
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                v.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                //deprecated in API 26
+                v.vibrate(200);
+            }
+
             return false;
         }
         return true;
@@ -181,7 +225,19 @@ public class LoginActivity extends AppCompatActivity {
         if (!(name_signup.getText().toString().trim().length() >= 3)) {
             //name_layout_signup.setErrorEnabled(true);
             //name_layout_signup.setError("نام باید حداقل 3 حرف باشد");
+
             error_name_signup.setVisibility(View.VISIBLE);
+
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            // Vibrate for 500 milliseconds
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                v.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                //deprecated in API 26
+                v.vibrate(200);
+            }
+
+
             return false;
         }
         return true;

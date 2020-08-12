@@ -44,10 +44,6 @@
         android:textColor="@color/grey_60"
         android:textSize="16sp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/acc_card_layout_add_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <com.example.takhfif01.widget.fonts.MyEditText
             android:focusedByDefault="false"
@@ -64,12 +60,38 @@
             android:textStyle="bold"
             android:theme="@style/EditText.Dark"
             tools:ignore="Deprecated" />
-    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:id="@+id/error_acc_card_add_profile"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_400"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:text="توجه !  "
+                />
+
+            <com.example.takhfif01.widget.fonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_400"
+                android:textSize="12sp"
+                android:text="شماره کارت باید 16 رقم باشد!"
+                />
+
+        </LinearLayout>
 
 
 
 
-</LinearLayout>
+
+    </LinearLayout>
 
     <View
         android:layout_marginTop="8dp"
