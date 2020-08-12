@@ -41,9 +41,6 @@ import java.util.ArrayList;
 public class ProfileActivity extends AppCompatActivity {
 
 
-    /**
-     * BUG WHEN USERNAME GETS CHANGE, IT NEEDS TO UPDATE FROM MAIN-ACTIVITY
-     */
 
 
     ArrayList<profileListItem> profileListItems;
@@ -64,6 +61,20 @@ public class ProfileActivity extends AppCompatActivity {
     ImageView btnBackProfile;
 
     SwipeRefreshLayout swipe_profile;
+
+    @Override
+    public void onBackPressed() {
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(ProfileActivity.this);
+        username = preferences.getString("username", "");
+
+        Intent intent = new Intent(C.context, MainActivity.class);
+        intent.putExtra("username", username);
+        setResult(RESULT_OK, intent);
+
+
+        super.onBackPressed();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +132,14 @@ public class ProfileActivity extends AppCompatActivity {
         btnBackProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                preferences = PreferenceManager.getDefaultSharedPreferences(ProfileActivity.this);
+                username = preferences.getString("username", "");
+
+                Intent intent = new Intent(C.context, MainActivity.class);
+                intent.putExtra("username", username);
+                setResult(RESULT_OK, intent);
+
                 finish();
             }
         });

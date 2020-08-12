@@ -61,6 +61,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
 
+    private final int CAMERA_REQUEST_CODE = 100;
+    public static int PROFILE_REQUEST_CODE = 200;
 
     ArrayList<buyMenuListItem> buyMenuAdapterArrayList;
     ArrayList<productMenuListItem> productItems;
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity  {
     private CardView btn_goto_profile_main,gotoShowShop,goToAllShopList,goToMyWallet;
 
     private ImageView btnSearchqr_main;
-    private final int CAMERA_REQUEST_CODE = 100;
+
 
 
 
@@ -111,7 +113,7 @@ public class MainActivity extends AppCompatActivity  {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == RESULT_OK) {
+        if (requestCode == PROFILE_REQUEST_CODE && resultCode == RESULT_OK) {
             Bundle bundle = data.getExtras();
             String username = bundle.getString("username");
             txtUserName_nav.setText(username);
@@ -290,6 +292,7 @@ public class MainActivity extends AppCompatActivity  {
     private void reqPermission() {
         ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.CAMERA}, CAMERA_REQUEST_CODE);
     }
+
     private void goToListOfAllShopActivity() {
         goToAllShopList.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -317,7 +320,7 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 //startActivity(intent);
-                startActivityForResult(intent,0);
+                startActivityForResult(intent,PROFILE_REQUEST_CODE);
             }
         });
     }
@@ -339,6 +342,7 @@ public class MainActivity extends AppCompatActivity  {
             //startActivityForResult(intent, 0);
             startActivity(intent);
             finish();
+            preManeger.setStartSlider(true);
         }
     }
 
@@ -464,7 +468,15 @@ public class MainActivity extends AppCompatActivity  {
                 drawerLayout.closeDrawer(Gravity.RIGHT);
             }
         });
-
+/**
+ *
+ * BE CAREFUL MAYBE THIS GONNA MAKE SOME PROBLEM
+ *
+ * editor.putString("username", "");
+ *                 editor.clear();
+ *                 editor.commit();
+ *
+ */
         (dialog.findViewById(R.id.bt_close_dialog_exit_from_profile)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
