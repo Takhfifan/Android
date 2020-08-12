@@ -10,7 +10,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="right">
 
-        <ScrollView
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -49,6 +50,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:src="@drawable/ic_baseline_arrow_drop_down_48"
                         android:id="@+id/imgArrowInfo_nav"
                         android:scaleType="centerCrop"
                         android:adjustViewBounds="true"
@@ -223,7 +225,6 @@
                         android:layout_height="wrap_content"
                         android:divider="@android:color/transparent"
                         android:layoutDirection="rtl"
-                        android:paddingTop="15dp"
                         />
 
 
@@ -261,7 +262,7 @@
             </LinearLayout>
 
 
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
 
     </com.google.android.material.navigation.NavigationView>
 </LinearLayout>

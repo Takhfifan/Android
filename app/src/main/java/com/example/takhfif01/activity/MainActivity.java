@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 import androidx.viewpager.widget.PagerAdapter;
@@ -55,6 +56,7 @@ import com.example.takhfif01.model.Image_Slider_Main;
 import com.example.takhfif01.model.buyMenuListItem;
 import com.example.takhfif01.model.productMenuListItem;
 import com.example.takhfif01.model.settingMenuListItem;
+import com.example.takhfif01.utils.ViewAnimation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,6 +90,7 @@ public class MainActivity extends AppCompatActivity  {
     private ImageView btnSearchqr_main;
 
 
+    NestedScrollView nested_scroll_view;
 
 
     private int width_phone,height_phone,width_height;
@@ -160,7 +163,7 @@ public class MainActivity extends AppCompatActivity  {
         //disableScrollingListViewInNav();
         addNavMenuList();
         openDrawer();
-        showMoreInfoInNav();
+        //showMoreInfoInNav();
         goToProfile();
         goToShowShop();
         goToListOfAllShopActivity();
@@ -168,7 +171,56 @@ public class MainActivity extends AppCompatActivity  {
         gtoMyWalletActivity();
 
 
+
+        linearInfo_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleSectionText(imgArrowInfo_nav);
+            }
+        });
+
+
     }
+
+
+
+    private void toggleSectionText(View view) {
+        boolean show = toggleArrow(view);
+        if (show) {
+            ViewAnimation.expand(linearMoreInfo_main, new ViewAnimation.AnimListener() {
+                @Override
+                public void onFinish() {
+                    nestedScrollTo(nested_scroll_view, linearMoreInfo_main);
+                }
+            });
+        } else {
+            ViewAnimation.collapse(linearMoreInfo_main);
+        }
+    }
+
+
+    public static void nestedScrollTo(final NestedScrollView nested, final View targetView) {
+        nested.post(new Runnable() {
+            @Override
+            public void run() {
+                nested.scrollTo(500, targetView.getBottom());
+            }
+        });
+    }
+
+
+    public boolean toggleArrow(View view) {
+        if (view.getRotation() == 0) {
+            view.animate().setDuration(200).rotation(180);
+            return true;
+        } else {
+            view.animate().setDuration(200).rotation(0);
+            return false;
+        }
+    }
+
+
+
 
 
     private void init() {
@@ -178,7 +230,7 @@ public class MainActivity extends AppCompatActivity  {
         linearInfo_main = findViewById(R.id.linearInfo_main);
         linearMoreInfo_main = findViewById(R.id.linearMoreInfo_main);
         imgArrowInfo_nav = findViewById(R.id.imgArrowInfo_nav);
-        imgArrowInfo_nav.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_48);
+        //imgArrowInfo_nav.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_48);
         productListView_nav = findViewById(R.id.productListView_nav);
         settingListView = findViewById(R.id.settingListView);
         txtUserName_nav = findViewById(R.id.txtUserName_nav);
@@ -189,6 +241,7 @@ public class MainActivity extends AppCompatActivity  {
         goToAllShopList = findViewById(R.id.goToAllShopList);
         btnSearchqr_main = findViewById(R.id.btnSearchqr_main);
         goToMyWallet = findViewById(R.id.goToMyWallet);
+        nested_scroll_view = findViewById(R.id.nested_scroll_view);
 
 
     }
@@ -439,7 +492,7 @@ public class MainActivity extends AppCompatActivity  {
 
         settingItems = new ArrayList<>();
         settingItems.add(new settingMenuListItem("سوالات متداول"));
-        settingItems.add(new settingMenuListItem("گزازش خطا"));
+        settingItems.add(new settingMenuListItem("گزارش خطا"));
         settingItems.add(new settingMenuListItem("درباره ما"));
         settingListView.setAdapter(new settingMenuAdapter(MainActivity.this, R.layout.menu_list_setting, settingItems));
 
