@@ -61,7 +61,7 @@ import com.example.takhfif01.utils.ViewAnimation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
 
     private final int CAMERA_REQUEST_CODE = 100;
     public static int PROFILE_REQUEST_CODE = 200;
@@ -79,13 +79,13 @@ public class MainActivity extends AppCompatActivity  {
     ArrayList<String> urlPics;
     ArrayList<String> name;*/
 
-    private TextView txtUserName_nav,txtexit_nav;
+    private TextView txtUserName_nav, txtexit_nav;
 
     public static SharedPreferences preferences;
 
     private SliderPreManger preManeger;
 
-    private CardView btn_goto_profile_main,gotoShowShop,goToAllShopList,goToMyWallet;
+    private CardView btn_goto_profile_main, gotoShowShop, goToAllShopList, goToMyWallet;
 
     private ImageView btnSearchqr_main;
 
@@ -93,8 +93,7 @@ public class MainActivity extends AppCompatActivity  {
     NestedScrollView nested_scroll_view;
 
 
-    private int width_phone,height_phone,width_height;
-
+    private int width_phone, height_phone, width_height;
 
 
     private ViewPager viewPager_image_slider_main;
@@ -111,8 +110,7 @@ public class MainActivity extends AppCompatActivity  {
     };
 
 
-
-   @Override
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -163,7 +161,7 @@ public class MainActivity extends AppCompatActivity  {
         //disableScrollingListViewInNav();
         addNavMenuList();
         openDrawer();
-        //showMoreInfoInNav();
+        showMoreInfoInNav();
         goToProfile();
         goToShowShop();
         goToListOfAllShopActivity();
@@ -171,56 +169,7 @@ public class MainActivity extends AppCompatActivity  {
         gtoMyWalletActivity();
 
 
-
-        linearInfo_main.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toggleSectionText(imgArrowInfo_nav);
-            }
-        });
-
-
     }
-
-
-
-    private void toggleSectionText(View view) {
-        boolean show = toggleArrow(view);
-        if (show) {
-            ViewAnimation.expand(linearMoreInfo_main, new ViewAnimation.AnimListener() {
-                @Override
-                public void onFinish() {
-                    nestedScrollTo(nested_scroll_view, linearMoreInfo_main);
-                }
-            });
-        } else {
-            ViewAnimation.collapse(linearMoreInfo_main);
-        }
-    }
-
-
-    public static void nestedScrollTo(final NestedScrollView nested, final View targetView) {
-        nested.post(new Runnable() {
-            @Override
-            public void run() {
-                nested.scrollTo(500, targetView.getBottom());
-            }
-        });
-    }
-
-
-    public boolean toggleArrow(View view) {
-        if (view.getRotation() == 0) {
-            view.animate().setDuration(200).rotation(180);
-            return true;
-        } else {
-            view.animate().setDuration(200).rotation(0);
-            return false;
-        }
-    }
-
-
-
 
 
     private void init() {
@@ -245,6 +194,7 @@ public class MainActivity extends AppCompatActivity  {
 
 
     }
+
 
     private void gtoMyWalletActivity() {
         goToMyWallet.setOnClickListener(new View.OnClickListener() {
@@ -343,7 +293,7 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     private void reqPermission() {
-        ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.CAMERA}, CAMERA_REQUEST_CODE);
+        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST_CODE);
     }
 
     private void goToListOfAllShopActivity() {
@@ -360,7 +310,7 @@ public class MainActivity extends AppCompatActivity  {
         gotoShowShop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ShowShopActivity.class);
+                Intent intent = new Intent(MainActivity.this, ShowShopActivity.class);
                 startActivity(intent);
             }
         });
@@ -373,7 +323,7 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 //startActivity(intent);
-                startActivityForResult(intent,PROFILE_REQUEST_CODE);
+                startActivityForResult(intent, PROFILE_REQUEST_CODE);
             }
         });
     }
@@ -448,7 +398,19 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
+
     private void showMoreInfoInNav() {
+
+
+        linearInfo_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleSectionText(imgArrowInfo_nav);
+            }
+        });
+
+
+       /*
         linearInfo_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -463,7 +425,46 @@ public class MainActivity extends AppCompatActivity  {
                 }
             }
         });
+
+
+        */
     }
+
+    private void toggleSectionText(View view) {
+        boolean show = toggleArrow(view);
+        if (show) {
+            ViewAnimation.expand(linearMoreInfo_main, new ViewAnimation.AnimListener() {
+                @Override
+                public void onFinish() {
+                    nestedScrollTo(nested_scroll_view, linearMoreInfo_main);
+                }
+            });
+        } else {
+            ViewAnimation.collapse(linearMoreInfo_main);
+        }
+    }
+
+
+    public static void nestedScrollTo(final NestedScrollView nested, final View targetView) {
+        nested.post(new Runnable() {
+            @Override
+            public void run() {
+                nested.scrollTo(500, targetView.getBottom());
+            }
+        });
+    }
+
+
+    public boolean toggleArrow(View view) {
+        if (view.getRotation() == 0) {
+            view.animate().setDuration(200).rotation(180);
+            return true;
+        } else {
+            view.animate().setDuration(200).rotation(0);
+            return false;
+        }
+    }
+
 
     private void openDrawer() {
         btnMenu_main.setOnClickListener(new View.OnClickListener() {
@@ -500,13 +501,12 @@ public class MainActivity extends AppCompatActivity  {
     }
 
 
-
     private void showCustomDialogForExitProfile() {
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
         dialog.setContentView(R.layout.dialog_warning_exit_from_profile);
         dialog.setCancelable(true);
-       // dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        // dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
@@ -552,8 +552,6 @@ public class MainActivity extends AppCompatActivity  {
         dialog.show();
         dialog.getWindow().setAttributes(lp);
     }
-
-
 
 
     private void setupSlider() {
@@ -634,13 +632,13 @@ public class MainActivity extends AppCompatActivity  {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             final Image_Slider_Main o2 = items2.get(position);
-            Log.i("TAG", "instantiateItem: "+o2);
+            Log.i("TAG", "instantiateItem: " + o2);
             LayoutInflater inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View v = inflater.inflate(R.layout.item_image_slider_main, container, false);
 
-            ImageView image =  v.findViewById(R.id.image_from_item_image_slider_main);
+            ImageView image = v.findViewById(R.id.image_from_item_image_slider_main);
             displayImageFromUrl(act, image, o2.image);
-            Log.i("TAG", "instantiateItem: "+o2.image);
+            Log.i("TAG", "instantiateItem: " + o2.image);
 
             ((ViewPager) container).addView(v);
 
@@ -656,12 +654,9 @@ public class MainActivity extends AppCompatActivity  {
     }
 
 
-
     public static void displayImageFromUrl(Context ctx, ImageView img, String drawable) {
 
         CircularProgressDrawable circularProgressDrawable = new CircularProgressDrawable(ctx);
-
-
 
 
         circularProgressDrawable.setStrokeWidth(15f);
@@ -676,7 +671,7 @@ public class MainActivity extends AppCompatActivity  {
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .into(img);
         } catch (Exception e) {
-            Log.e("TAG", "displayImageFromUrl: "+e.toString());
+            Log.e("TAG", "displayImageFromUrl: " + e.toString());
         }
     }
 
@@ -714,29 +709,27 @@ public class MainActivity extends AppCompatActivity  {
         handler_image_slider_main.postDelayed(runnable_image_slider_main, 3000);
     }
 
-    private void getSizeScreen(){
+    private void getSizeScreen() {
 
         Display screensize = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         screensize.getSize(size);
-        width_phone  = size.x;
+        width_phone = size.x;
         height_phone = size.y;
 
 
-
-        if (width_phone<=480 && height_phone<=800){
+        if (width_phone <= 480 && height_phone <= 800) {
             width_height = 13;
 
-        }else if (width_phone<=720 && height_phone<=1184){
+        } else if (width_phone <= 720 && height_phone <= 1184) {
             width_height = 20;
-        }
-        else {
+        } else {
 
             width_height = 25;
         }
 
 
-        Log.i("TAG", "getSizeScreen: \n width="+width_phone+"\n"+"height="+height_phone);
+        Log.i("TAG", "getSizeScreen: \n width=" + width_phone + "\n" + "height=" + height_phone);
 
 
     }
@@ -744,7 +737,8 @@ public class MainActivity extends AppCompatActivity  {
 
     @Override
     public void onDestroy() {
-        if (runnable_image_slider_main != null) handler_image_slider_main.removeCallbacks(runnable_image_slider_main);
+        if (runnable_image_slider_main != null)
+            handler_image_slider_main.removeCallbacks(runnable_image_slider_main);
         super.onDestroy();
     }
 
