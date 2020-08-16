@@ -22,6 +22,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.media.Image;
@@ -57,11 +58,19 @@ import com.example.takhfif01.model.buyMenuListItem;
 import com.example.takhfif01.model.productMenuListItem;
 import com.example.takhfif01.model.settingMenuListItem;
 import com.example.takhfif01.utils.ViewAnimation;
+import com.example.takhfif01.widget.myToastSnackBar;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.takhfif01.widget.myToastSnackBar.simpleSnackBarFloating;
+import static com.example.takhfif01.widget.myToastSnackBar.simpleToastFloating;
+
 public class MainActivity extends AppCompatActivity {
+
+
+
+    private long oldCurrentTimeMillis;
 
     private final int CAMERA_REQUEST_CODE = 100;
     public static int PROFILE_REQUEST_CODE = 200;
@@ -741,6 +750,34 @@ public class MainActivity extends AppCompatActivity {
             handler_image_slider_main.removeCallbacks(runnable_image_slider_main);
         super.onDestroy();
     }
+
+
+
+    @Override
+    public void onBackPressed() {
+
+        int time_interval = 2000;
+        if (oldCurrentTimeMillis + time_interval > System.currentTimeMillis()) {
+            super.onBackPressed();
+            return;
+        } else {
+            onFirstBackPressed();
+
+        }
+        oldCurrentTimeMillis = System.currentTimeMillis();
+    }
+
+
+    public void onFirstBackPressed() {
+
+        simpleSnackBarFloating(MainActivity.this,
+                "برای خروج دوباره کلیک کنید!",
+                ColorStateList.valueOf(getResources().getColor(R.color.grey_90)),
+                ColorStateList.valueOf(getResources().getColor(R.color.white)));
+
+
+    }
+
 
 
 }

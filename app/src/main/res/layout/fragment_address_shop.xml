@@ -63,8 +63,8 @@
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
                             android:src="@drawable/ic_baseline_location_on_24" />
 
                     </LinearLayout>
@@ -139,8 +139,8 @@
                     android:textSize="20sp" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:src="@drawable/ic_baseline_local_phone_24"
                     android:tint="@color/colorPrimary" />
 
@@ -344,8 +344,8 @@
                     android:textSize="20sp" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:src="@drawable/ic_baseline_access_time_24"
                     android:tint="@color/colorPrimary" />
 
@@ -405,8 +405,8 @@
                     android:textSize="20sp" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/ic_baseline_calendar_today_24"
                     android:tint="@color/colorPrimary" />
 
