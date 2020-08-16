@@ -8,6 +8,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
@@ -27,7 +28,13 @@ import com.example.takhfif01.R;
 import com.example.takhfif01.activity.introSlider.SliderPreManger;
 import com.google.android.material.textfield.TextInputLayout;
 
+import static com.example.takhfif01.widget.myToastSnackBar.simpleSnackBarFloating;
+
 public class LoginActivity extends AppCompatActivity {
+
+
+    private long oldCurrentTimeMillis;
+
 
     Button btn_login_getKey, btn_login_send;
     RelativeLayout scroll_login_getKey, scroll_login_setKey;
@@ -55,9 +62,9 @@ public class LoginActivity extends AppCompatActivity {
         init();
         preManeger = new SliderPreManger(getApplicationContext());
 
-        backToGetKeyNumber();
         getKeyNumber();
         setKeyNumber();
+        backToGetKeyNumber();
 
 
     }
@@ -91,6 +98,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 scroll_login_getKey.setVisibility(View.VISIBLE);
                 scroll_login_setKey.setVisibility(View.GONE);
+                error_number_getcode.setVisibility(View.INVISIBLE);
             }
         });
     }
@@ -142,8 +150,29 @@ public class LoginActivity extends AppCompatActivity {
                             String number = number_signup.getText().toString().trim();
                             showNumber_getcode.setText(number);
 
-                            scroll_login_getKey.setVisibility(View.GONE);
-                            scroll_login_setKey.setVisibility(View.VISIBLE);
+
+                    /*      scroll_login_getKey.animate()
+                                    .translationY(scroll_login_getKey.getHeight())
+                                    .alpha(0.0f)
+                                    .setDuration(300)
+                                    .setListener(new AnimatorListenerAdapter() {
+                                        @Override
+                                        public void onAnimationEnd(Animator animation) {
+                                            super.onAnimationEnd(animation);*/
+
+                                            scroll_login_getKey.setVisibility(View.GONE);
+                                            scroll_login_setKey.setVisibility(View.VISIBLE);
+                                      /*  }
+                                    });*/
+
+
+
+
+                            error_number_signup.setVisibility(View.INVISIBLE);
+                            error_lastname_signup.setVisibility(View.INVISIBLE);
+                            error_name_signup.setVisibility(View.INVISIBLE);
+
+
                         }
                     }
                 }
@@ -242,5 +271,47 @@ public class LoginActivity extends AppCompatActivity {
         }
         return true;
     }
+
+
+
+
+    @Override
+    public void onBackPressed() {
+
+        int time_interval = 2000;
+
+        if (scroll_login_getKey.getVisibility()==View.VISIBLE){
+        if (oldCurrentTimeMillis + time_interval > System.currentTimeMillis()) {
+            super.onBackPressed();
+            return;
+        } else {
+            onFirstBackPressed();
+
+        }
+        oldCurrentTimeMillis = System.currentTimeMillis();
+    }else{
+
+            scroll_login_getKey.setVisibility(View.VISIBLE);
+            scroll_login_setKey.setVisibility(View.GONE);
+            error_number_getcode.setVisibility(View.INVISIBLE);
+        }
+
+
+    }
+
+
+    public void onFirstBackPressed() {
+
+        simpleSnackBarFloating(LoginActivity.this,
+                "برای خروج دوباره کلیک کنید!",
+                ColorStateList.valueOf(getResources().getColor(R.color.grey_90)),
+                ColorStateList.valueOf(getResources().getColor(R.color.white)));
+
+
+    }
+
+
+
+
 
 }
