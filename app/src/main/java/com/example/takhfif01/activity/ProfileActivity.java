@@ -167,11 +167,29 @@ public class ProfileActivity extends AppCompatActivity {
 
         if (username != null || phoneNumber != null) {
             if (username.equals("") || phoneNumber.equals("")) {
+
+                preManeger.setStartSlider(true);
+
+                Intent intent = new Intent(C.context, LoginActivity.class);
+                intent.putExtra("username", "");
+                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                //startActivity(intent);
+                setResult(RESULT_OK, intent);
+
                 finish();
             } else {
                 txtUserName_profile.setText(username);
             }
         } else {
+
+            preManeger.setStartSlider(true);
+
+            Intent intent = new Intent(C.context, LoginActivity.class);
+            intent.putExtra("username", "");
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            //startActivity(intent);
+            setResult(RESULT_OK, intent);
+
             finish();
         }
     }

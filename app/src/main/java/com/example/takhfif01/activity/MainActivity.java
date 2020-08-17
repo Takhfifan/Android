@@ -69,7 +69,6 @@ import static com.example.takhfif01.widget.myToastSnackBar.simpleToastFloating;
 public class MainActivity extends AppCompatActivity {
 
 
-
     private long oldCurrentTimeMillis;
 
     private final int CAMERA_REQUEST_CODE = 100;
@@ -103,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     private int width_phone, height_phone, width_height;
+
+    private String username, phoneNumber;
 
 
     private ViewPager viewPager_image_slider_main;
@@ -369,7 +370,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void checkUsernameInNav() {
-        if (txtUserName_nav.getText().toString().equals("")) {
+
+        if (username.equals("") || phoneNumber.equals("")) {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             //startActivityForResult(intent, 0);
             startActivity(intent);
@@ -380,7 +382,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpUsernameInNav() {
         preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-        String username = preferences.getString("username", "");
+        username = preferences.getString("username", "");
+        phoneNumber = preferences.getString("phoneNumber", "");
 
         txtUserName_nav.setText(username);
         Log.i("TAG", "setUpUsernameInNav: username" + username);
@@ -772,7 +775,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     public void onBackPressed() {
 
@@ -797,7 +799,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
 
 }
