@@ -19,8 +19,8 @@
 
             <ImageView
                 android:id="@+id/btnBack_comment_activity"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
@@ -39,7 +39,7 @@
                 android:layout_toLeftOf="@+id/btnBack_comment_activity"
                 android:text="ثبت نظر"
                 android:textColor="#FFF"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
 

@@ -28,19 +28,19 @@
                 <com.example.takhfif01.widget.fonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="بیشتر"
-                    android:textColor="#fff"
                     android:layout_centerInParent="true"
                     android:layout_marginRight="8dp"
-                    android:textSize="18sp"
+                    android:text="بیشتر"
+                    android:textColor="#fff"
+                    android:textSize="17sp"
                     android:textStyle="bold"
                     android:layout_toLeftOf="@+id/btnBack_more_info_shop"/>
 
                 <ImageView
                     android:layout_marginRight="8dp"
                     android:id="@+id/btnBack_more_info_shop"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerHorizontal="true"

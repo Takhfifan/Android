@@ -145,11 +145,25 @@ public class MainActivity extends AppCompatActivity {
 
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                Toast.makeText(this, "مجوز تایید شد شما میتوانید وارد شوید", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "مجوز تایید شد شما میتوانید وارد شوید", Toast.LENGTH_SHORT).show();
+
+
+                simpleToastFloating(MainActivity.this,
+                        "مجوز تایید شد شما میتوانید وارد شوید",
+                        ColorStateList.valueOf(getResources().getColor(R.color.grey_90)),
+                        ColorStateList.valueOf(getResources().getColor(R.color.white)));
+
 
             } else {
 
-                Toast.makeText(this, "مجوز رد شد", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "مجوز رد شد", Toast.LENGTH_SHORT).show();
+
+
+                simpleToastFloating(MainActivity.this,
+                        "مجوز رد شد",
+                        ColorStateList.valueOf(getResources().getColor(R.color.grey_90)),
+                        ColorStateList.valueOf(getResources().getColor(R.color.white)));
+
 
             }
 
@@ -225,7 +239,13 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
 
-                    Toast.makeText(MainActivity.this, "مجوز قبلا دریافت شده", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "مجوز قبلا دریافت شده", Toast.LENGTH_SHORT).show();
+
+                    simpleToastFloating(MainActivity.this,
+                            "مجوز قبلا دریافت شده",
+                            ColorStateList.valueOf(getResources().getColor(R.color.grey_90)),
+                            ColorStateList.valueOf(getResources().getColor(R.color.white)));
+
 
                 }
             }
@@ -545,7 +565,7 @@ public class MainActivity extends AppCompatActivity {
                 preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
                 SharedPreferences.Editor editor = preferences.edit();
                 //editor.putString("username", "");
-                editor.clear();
+                editor.clear();//BE CAREFUL
                 editor.commit();
                 drawerLayout.closeDrawer(Gravity.RIGHT);
 

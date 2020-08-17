@@ -24,8 +24,8 @@
 
                 <ImageView
                     android:id="@+id/btnBack_comment_activity"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginRight="8dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
@@ -39,11 +39,11 @@
                 <com.example.takhfif01.widget.fonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="نظرات"
                     android:layout_marginRight="8dp"
+                    android:text="نظرات"
                     android:textStyle="bold"
                     android:textColor="#FFF"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:layout_centerInParent="true"
                     android:layout_toLeftOf="@+id/btnBack_comment_activity"/>
 

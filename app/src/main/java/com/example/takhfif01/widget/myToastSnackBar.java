@@ -17,7 +17,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class myToastSnackBar {
 
 
-    public static void simpleToastFloating(Activity context, String message, ColorStateList colorStateList) {
+    public static void simpleToastFloating(Activity context, String message, ColorStateList colorBackgroundCardView, ColorStateList colorText) {
         final Toast toast = new Toast(C.context);
         toast.setDuration(Toast.LENGTH_SHORT);
 
@@ -27,7 +27,8 @@ public class myToastSnackBar {
         final CardView card_simple_snackbar_toast_floating = view.findViewById(R.id.card_simple_snackbar_toast_floating);
         final TextView txt_simple_snackbar_toast_floating = view.findViewById(R.id.txt_simple_snackbar_toast_floating);
         txt_simple_snackbar_toast_floating.setText(message);
-        card_simple_snackbar_toast_floating.setCardBackgroundColor (colorStateList);//context.getResources().getColor(R.color.grey_90)
+        card_simple_snackbar_toast_floating.setCardBackgroundColor (colorBackgroundCardView);//context.getResources().getColor(R.color.grey_90)
+        txt_simple_snackbar_toast_floating.setTextColor(colorText);//context.getResources().getColor(R.color.white)
         toast.setView(view);
         toast.show();
     }

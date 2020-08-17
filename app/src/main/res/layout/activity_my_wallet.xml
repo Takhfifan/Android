@@ -39,12 +39,13 @@
                     android:src="@drawable/cancel_24" />
                 <com.example.takhfif01.widget.fonts.MyTextView
                     android:layout_toLeftOf="@+id/btnBack_my_wallet"
-                    android:layout_marginRight="4dp"
+                    android:layout_marginRight="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="کیف پول"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
                     android:textColor="@android:color/white" />
 
             </RelativeLayout>

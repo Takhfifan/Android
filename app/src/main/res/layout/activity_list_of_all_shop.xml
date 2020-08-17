@@ -28,11 +28,12 @@
                 <com.example.takhfif01.widget.fonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="8dp"
                     android:text="دسته بندی"
                     android:textColor="#fff"
-                    android:layout_centerInParent="true"
-                    android:layout_marginRight="4dp"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
                     android:layout_toLeftOf="@+id/btnBack_list_of_all_shop"/>
 
                 <ImageView

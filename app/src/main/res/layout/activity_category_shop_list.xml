@@ -37,9 +37,9 @@
             <com.example.takhfif01.widget.fonts.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
                 android:text="رستوران"
                 android:textColor="#fff"
-                android:layout_marginRight="8dp"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:layout_centerInParent="true"
